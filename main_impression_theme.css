@@ -30,6 +30,15 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	    color:#212121;
 	}
 
+	ul {
+		font-family:'Open Sans';
+		text-decoration:none; 
+		color: #212121; 
+		font-size: 18px; 
+		text-align: left; 
+		line-height: 1.4;
+	}
+
 	/* Get involved page */
 	p.getinvolved {
 		font-size: 18px; 
@@ -38,15 +47,6 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	div.getinvolved {
 		text-align:left; 
 		padding: 0px 0px 0px 0px
-	}
-
-	ul.getinvolved {
-		font-family:'Open Sans';
-		text-decoration:none; 
-		color: #212121; 
-		font-size: 18px; 
-		text-align: left; 
-		line-height: 1.4;
 	}
 
 	/* Donate */
