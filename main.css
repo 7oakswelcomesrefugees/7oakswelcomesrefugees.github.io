@@ -7,6 +7,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
       The CSS file will now be referenced using the following:
 <link rel="stylesheet" type="text/css" href="https://7oakswelcomesrefugees.github.io/main.css">
  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 	body {
 		margin: 0;
