@@ -19,6 +19,12 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		font-size: 18px; 
 	}
 
+	a {
+		font-family:'Open Sans';
+		color: #212121;
+		font-size: 18px; 
+	}
+
 	td
 	{
 	    padding:0 15px;
@@ -48,6 +54,11 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		text-align:left; 
 		padding: 0px 0px 0px 0px
 	}
+	/* Landlords */
+	#FAQheader {
+		text-decoration: none; 
+		font-size: 30px;
+	}
 
 	/* Donate */
 	div.donate {
@@ -65,15 +76,15 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 
 	a.aboutus {
 		font-family:'Open Sans';
-		color: black; 
+		color: #212121; 
 		text-decoration: none; 
 		font-size: 25px;  
-		line-height: 1.7;
+		line-height: 1.5;
 	}
 
 	/* Safeguarding*/
 	table.safeguarding {
-	  	border: 1px double black;
+	  	border: 1px double #212121;
   		border-spacing:0;
   		border-radius: 6px;
 	}
@@ -83,11 +94,14 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	}
 
 	table.safeguarding td {
-  		border: 1px solid black;
+  		border: 1px solid #212121;
   		border-spacing:0;
 	}
 
 	/* Contact us */
 	div.contactus {
 		padding: 2px 0 0 0;
+	}
+	#addressblurb {
+		font-size: 14px;
 	}
