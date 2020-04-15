@@ -74,9 +74,9 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	   background:transparent; 
 	   position:relative; 
 	   width:100%;
-	   height:540px; /* your iframe height */
-	   top:540px;  /* your iframe height */
-	   margin-top:-540px;  /* your iframe height */
+	   height:440px; /* your iframe height */
+	   top:440px;  /* your iframe height */
+	   margin-top:-440px;  /* your iframe height */
 	   z-index: 99;
 	   cursor: pointer;
 	}
