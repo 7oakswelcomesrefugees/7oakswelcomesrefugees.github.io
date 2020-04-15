@@ -83,6 +83,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	  float: left;
 	  width: 33.33%;
 	  padding: 5px;
+	  padding-bottom: 0px;
 	}
 
 /* Clearfix (clear floats) */
