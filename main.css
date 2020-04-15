@@ -88,6 +88,18 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	  padding-bottom: 0px;
 	}
 
+
+	  .logoHeader {
+	  	position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    background-repeat: no-repeat;
+	    background-size: contain;
+	  }
+    </style>
+
 /* Clearfix (clear floats) */
 	.row::after {
 	  content: "";
