@@ -99,7 +99,6 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
   	float: left;
   	display:inline-block;
   }
-    </style>
 
 /* Clearfix (clear floats) */
 	.row::after {
