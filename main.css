@@ -67,6 +67,16 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 
 	p.donate {
 		font-size: 18px; 
+	}	
+
+	/* Cookbook */
+	.overlay {
+	   background:transparent; 
+	   position:relative; 
+	   width:640px;
+	   height:480px; /* your iframe height */
+	   top:480px;  /* your iframe height */
+	   margin-top:-480px;  /* your iframe height */
 	}
 
 	/* About us */
