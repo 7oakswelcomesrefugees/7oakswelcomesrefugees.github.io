@@ -89,15 +89,13 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	}
 
 
-	  .logoHeader {
-	  	position: absolute;
-	    top: 0;
-	    left: 0;
-	    right: 0;
-	    bottom: 0;
-	    background-repeat: no-repeat;
-	    background-size: contain;
-	  }
+  .logoHeader {
+  	width: 100%;
+  }
+
+  .infowindow {
+  	float: left;
+  }
     </style>
 
 /* Clearfix (clear floats) */
