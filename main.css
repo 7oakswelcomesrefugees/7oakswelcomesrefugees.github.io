@@ -79,6 +79,19 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	   margin-top:-480px;  /* your iframe height */
 	}
 
+	.column {
+	  float: left;
+	  width: 33.33%;
+	  padding: 5px;
+	}
+
+/* Clearfix (clear floats) */
+	.row::after {
+	  content: "";
+	  clear: both;
+	  display: table;
+	}
+
 	/* About us */
 	div.aboutus {
 		padding: 0px 0px 0px 7px;
