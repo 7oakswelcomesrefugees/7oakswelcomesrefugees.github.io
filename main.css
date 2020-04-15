@@ -78,6 +78,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	   top:540px;  /* your iframe height */
 	   margin-top:-540px;  /* your iframe height */
 	   z-index: 99;
+	   cursor: pointer;
 	}
 
 	.column {
