@@ -84,6 +84,16 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	}
 
 	/* Cookbook */
+
+	.column {
+	  float: left;
+	  width: 33.33%;
+	  padding: 5px;
+	  padding-bottom: 0px;
+	  padding-top: 0px;
+	}
+	
+	/*Our Cookbook Map*/
 	.overlay {
 	   background:transparent; 
 	   position:relative; 
@@ -94,13 +104,52 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	   cursor: pointer;
 	}
 
-	.column {
-	  float: left;
-	  width: 33.33%;
-	  padding: 5px;
-	  padding-bottom: 0px;
-	  padding-top: 0px;
+	#lock_div {
+		position: relative; 
+		pointer-events: none
 	}
+	
+	#lock_div div {
+		height:0.7cm;
+		position: absolute
+			top:100%; 
+			left: 100%; 
+			transform: translate( -100% ,-100%); 
+		pointer-events: none
+	}
+
+	#lock_pic {
+		height:0.7cm; 
+		float:left; 
+		transform: translate(-80%,-50%); 
+		display: none; 
+		pointer-events: all
+	}
+
+	#translucent_div {
+		z-index: 97; 
+		background-color: white; 
+		opacity: 0.5;
+	}
+
+	#unlock_div {
+		z-index: 98;
+		position: relative;
+	}
+
+	#top_overlay {
+		z-index: 99
+	}
+
+	#lock_control {
+		height:0.7cm;
+		width: 270px;
+		position: absolute; 
+			top:50%; 
+			left: 50%; 
+			transform: translate( -50% ,-50%); 
+	}
+
 
 /* Clearfix (clear floats) */
 	.row::after {
@@ -157,3 +206,4 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	#addressblurb {
 		font-size: 18px;
 	}
+
