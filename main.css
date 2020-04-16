@@ -69,9 +69,15 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		font-size: 18px; 
 	}
 
-	td.donate {
-		font-size: 15px;
-	}	
+	table.donate {
+		padding-left: 10px
+	}
+
+	table.donate td {
+		font-size: 17px;
+		padding-left: 7px;
+		padding-right: 7px
+	}
 
 	/* Cookbook */
 	.overlay {
