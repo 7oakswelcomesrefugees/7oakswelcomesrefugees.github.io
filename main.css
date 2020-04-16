@@ -90,7 +90,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	   width:100%;
 	   height:var(--map-window-height); /* your iframe height */
 	   top:var(--map-window-height);  /* your iframe height */
-	   margin-top:var(--map-window-height);  /* your iframe height */
+	   margin-top: calc(var(--map-window-height)*-1);  /* your iframe height */
 	   cursor: pointer;
 	}
 
