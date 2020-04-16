@@ -149,6 +149,21 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 			transform: translate( -50% ,-50%); 
 	}
 
+	#lock_control div:first-child {
+		width: 40;
+	}
+
+
+	#lock_control div:last-child {
+		height:100%;
+		float:left;
+		display: flex; 
+		flex-flow: column nowrap; 
+		flex-direction: column; 
+		justify-content: center; 
+		padding-left: 10px
+	}
+
 
 /* Clearfix (clear floats) */
 	.row::after {
