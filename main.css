@@ -218,5 +218,6 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	}
 	#addressblurb {
 		font-size: 18px;
+		padding-left: 20%;
 	}
 
