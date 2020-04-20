@@ -8,6 +8,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 <link rel="stylesheet" type="text/css" href="https://7oakswelcomesrefugees.github.io/main.css">
  */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
 	:root {
 	  --map-window-height: 480px;
@@ -81,6 +82,15 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		font-size: 15px;
 		padding-left: 7px;
 		padding-right: 7px
+	}
+
+	/* Meet the commmunity */
+
+	p.meetthecommunity {
+		font-family:'Oswald';
+		color: #212121;
+		font-size: 38px; 
+		padding: 0 0 0 0;
 	}
 
 	/* Cookbook */
