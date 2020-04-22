@@ -18,4 +18,16 @@ var head = document.getElementsByTagName('HEAD')[0];
   
         // Append link element to HTML head 
         head.appendChild(link);
+
+        var supportsOrientationChange = "onorientationchange" in window,
+    	orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
+
+		window.addEventListener(orientationEvent, function() {
+		    alert('HOLY ROTATING SCREENS BATMAN:' + window.orientation + " " + screen.width);
+		    if ((window.orientation ==0) || (window.orientation == 180)) {
+		    	document.documentElement.style.setProperty("--map-window-height", 200);
+		    } else if ((window.orientation == -90) || (window.orientation == 90))  {
+		    	document.documentElement.style.setProperty("--map-window-height", 300);
+		    }
+		}, false);
 }
