@@ -57,11 +57,10 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		text-align:left; 
 		padding: 0px 0px 0px 0px
 	}
-	/* Landlords */
+	/* Landlords  */
 	#FAQheader {
 		text-decoration: none; 
 		font-size: 30px;
-		height: 30px;
 		width: 100%;
 	}
 
