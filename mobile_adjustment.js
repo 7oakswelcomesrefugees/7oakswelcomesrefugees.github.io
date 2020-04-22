@@ -21,9 +21,9 @@ var head = document.getElementsByTagName('HEAD')[0];
 
 		window.addEventListener("orientationchange", function() {
 		    if ((window.orientation ==0) || (window.orientation == 180)) {
-		    	document.documentElement.style.setProperty("--map-window-height", 200);
+		    	document.documentElement.style.setProperty("--map-window-height", "200px");
 		    } else if ((window.orientation == -90) || (window.orientation == 90))  {
-		    	document.documentElement.style.setProperty("--map-window-height", 300);
+		    	document.documentElement.style.setProperty("--map-window-height", "300px");
 		    }
 		}, false);
 }
