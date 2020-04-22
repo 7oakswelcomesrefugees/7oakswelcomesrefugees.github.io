@@ -78,6 +78,8 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	/* Donate */
 	div.donate {
 		padding: 0px 0px 0px 14px;
+		z-index: 99;
+		pointer-events: none;
 	}
 
 	p.donate {
@@ -85,10 +87,10 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		margin:0;
 	}
 
-	#address_div {
+	/*#address_div {
 		z-index: 99;
 		pointer-events: none;
-	}
+	}*/
 
 	table.donate {
 		padding-left: 3px
