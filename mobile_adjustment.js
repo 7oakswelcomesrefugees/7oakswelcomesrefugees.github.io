@@ -19,14 +19,6 @@ var head = document.getElementsByTagName('HEAD')[0];
         // Append link element to HTML head 
         head.appendChild(link);
 
-	window.addEventListener("orientationchange", function() {
-	    if ((window.orientation ==0) || (window.orientation == 180)) {
-	    	document.documentElement.style.setProperty("--map-window-height", "200px");
-	    } else if ((window.orientation == -90) || (window.orientation == 90))  {
-	    	document.documentElement.style.setProperty("--map-window-height", "300px");
-	    }
-	}, false);
-
         if (document.getElementById("family_testimonials")) {
                 image1 = document.getElementById("image1");
                 image2 = document.getElementById("image2");
@@ -36,7 +28,17 @@ var head = document.getElementsByTagName('HEAD')[0];
                 image1.parentElement.style.width = "100%";
                 image1.parentElement.style.padding = 0;
                 image2.parentElement.style.width = "100%";
-                image1.parentElement.style.padding = 0;
+                image2.parentElement.style.padding = 0;
                 image2.parentElement.style.display = "block";
         }
+
+	window.addEventListener("orientationchange", function() {
+	    if ((window.orientation ==0) || (window.orientation == 180)) {
+	    	document.documentElement.style.setProperty("--map-window-height", "200px");
+	    } else if ((window.orientation == -90) || (window.orientation == 90))  {
+	    	document.documentElement.style.setProperty("--map-window-height", "300px");
+	    }
+	}, false);
+
+
 }
