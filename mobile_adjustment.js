@@ -33,8 +33,8 @@ var head = document.getElementsByTagName('HEAD')[0];
                 image1.src = "https://7oakswelcomesrefugees.github.io/RefugeeSpeechBubbles_splitA.png"
                 image2.src = "https://7oakswelcomesrefugees.github.io/RefugeeSpeechBubbles_splitB.png"
 
-                image1.parentElement.style.width = "50%";
-                image2.parentElement.style.width = "50%";
+                image1.parentElement.style.width = "100%";
+                image2.parentElement.style.width = "100%";
                 image2.parentElement.style.display = "block";
         }
 }
