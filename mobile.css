@@ -40,3 +40,7 @@ a.aboutus {
    top: var(--map-window-height);  /* your iframe height */
    margin-top: calc(var(--map-window-height)*-1);  /* your iframe height */
 }
+
+#lock_control {
+	left: 55%; 
+}
