@@ -6,6 +6,8 @@ div.aboutus {
 	margin-top: -2px;
 }
 
+/*Trustee name and position */
+
 a.aboutus {
 		font-family:'Open Sans';
 		color: #212121; 
@@ -15,11 +17,26 @@ a.aboutus {
 		height: 40px;
 	}
 
+/* Contact us address */	
+
 #addressblurb {
 	font-size: 18px;
 	padding-left: 10%;
 }
 
+/* Embedded Google map */
+
+:root {
+  --map-window-height: 220px;
+}
+
 #map_iframe {
-	height:220;
+	height: var(--map-window-height);
+}
+
+.overlay {
+
+   height: var(--map-window-height); /* your iframe height */
+   top: var(--map-window-height);  /* your iframe height */
+   margin-top: calc(var(--map-window-height)*-1);  /* your iframe height */
 }
