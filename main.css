@@ -80,6 +80,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		padding: 0px 0px 0px 14px;
 		z-index: 99;
 		pointer-events: none;
+		position:relative;
 	}
 
 	p.donate {
@@ -90,6 +91,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	#table_div {
 		z-index: 99;
 		pointer-events: none;
+		position: relative;
 	}
 
 	table.donate {
