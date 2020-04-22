@@ -197,7 +197,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	/* About us */
 	div.aboutus {
 		padding: 0px 0px 0px 7px;
-		margin-top: -10px;
+		margin-top: -6px;
 	}
 
 	a.aboutus {
