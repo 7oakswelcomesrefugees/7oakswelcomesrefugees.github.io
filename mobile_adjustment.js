@@ -27,7 +27,7 @@ var head = document.getElementsByTagName('HEAD')[0];
 	    }
 	}, false);
 
-        if (document.getElementsByClassName("meetthecommunity")) {
+        if (document.getElementsByClassName("family_testimonials")) {
                 image1 = document.getElementById("image1");
                 image2 = document.getElementById("image2");
                 image1.src = "https://7oakswelcomesrefugees.github.io/RefugeeSpeechBubbles_splitA.png"
