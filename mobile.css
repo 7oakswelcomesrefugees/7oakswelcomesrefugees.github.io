@@ -27,7 +27,7 @@ a.aboutus {
 /* Embedded Google map */
 
 :root {
-  --map-window-height: 190px;
+  --map-window-height: 210px;
 }
 
 #map_iframe {
@@ -43,4 +43,5 @@ a.aboutus {
 
 #lock_control {
 	left: 53%; 
+	top: 37.5%;
 }
