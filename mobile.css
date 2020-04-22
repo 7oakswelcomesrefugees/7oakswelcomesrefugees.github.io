@@ -1,3 +1,7 @@
+/* Script include tag:
+<script type="text/javascript" src="https://7oakswelcomesrefugees.github.io/mobile_adjustment.js"></script>
+*/
+
 div.aboutus {
 	margin-top: -2px;
 }
@@ -10,3 +14,8 @@ a.aboutus {
 		line-height: 1.2;
 		height: 40px;
 	}
+
+#addressblurb {
+	font-size: 18px;
+	padding-left: 10%;
+}
