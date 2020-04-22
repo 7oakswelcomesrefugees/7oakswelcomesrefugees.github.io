@@ -82,6 +82,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 
 	p.donate {
 		font-size: 18px; 
+		margin:0;
 	}
 
 	table.donate {
