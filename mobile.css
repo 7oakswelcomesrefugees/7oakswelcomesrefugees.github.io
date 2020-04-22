@@ -19,3 +19,7 @@ a.aboutus {
 	font-size: 18px;
 	padding-left: 10%;
 }
+
+#map_iframe {
+	height:240;
+}
