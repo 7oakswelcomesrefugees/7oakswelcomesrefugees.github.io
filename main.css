@@ -77,16 +77,18 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 
 	/* Donate */
 	div.donate {
-		padding: 0px 0px 0px 20px;
+		padding: 0px 0px 0px 14px;
 	}
 
 	p.donate {
 		font-size: 18px; 
-		margin:0;
+		margin:0
+
+		;
 	}
 
 	table.donate {
-		padding-left: 6px
+		padding-left: 3px
 	}
 
 	table.donate td {
