@@ -27,7 +27,7 @@ a.aboutus {
 /* Embedded Google map */
 
 :root {
-  --map-window-height: 205px;
+  --map-window-height: 190px;
 }
 
 #map_iframe {
