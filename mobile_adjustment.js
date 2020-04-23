@@ -79,13 +79,12 @@ var head = document.getElementsByTagName('HEAD')[0];
                 root.style.setProperty('--map-window-height', "200px");
 
                 lock_pic=document.getElementById("lock_pic");
-                lock_pic.src = "reduceMapIcon.png"
-                lock_pic.style.display ="block"; 
+                lock_pic.style.display ="none"; 
 
                          unlock_div=document.getElementById("unlock_div")
-                      unlock_div.style.display= "none"; 
+                      unlock_div.style.display= "block"; 
                       translucent_div=document.getElementById("translucent_div")
-                      translucent_div.style.display= "none"; 
+                      translucent_div.style.display= "block"; 
                     top_overlay=document.getElementById("top_overlay");
                     top_overlay.style.display = "block";
                       
