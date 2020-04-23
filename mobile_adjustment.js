@@ -32,6 +32,9 @@ var head = document.getElementsByTagName('HEAD')[0];
                 image2.parentElement.style.display = "block";
         }
 
+        map_height = Math.round(screen_width*(1/3));
+        document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
+
         lock_control = document.getElementById("lock_control");
         if (lock_control) {
             window.addEventListener("orientationchange", function() {
