@@ -43,7 +43,7 @@ var head = document.getElementsByTagName('HEAD')[0];
         document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
                 document.getElementById("map_iframe").height = 200;
             } else if ((window.orientation == -90) || (window.orientation == 90))  {
-                map_height = Math.round(screen.height*(2/3));
+                map_height = Math.round(screen.height*(0.5));
         document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
             }
         }, false);    
