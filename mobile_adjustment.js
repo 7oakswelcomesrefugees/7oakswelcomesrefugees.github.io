@@ -3,7 +3,7 @@
 */
 
 var screen_width = screen.width;
-if (screen_width > 480 ) {
+if (screen_width < 480 ) {
 var head = document.getElementsByTagName('HEAD')[0];  
   
         // Create new link Element 
