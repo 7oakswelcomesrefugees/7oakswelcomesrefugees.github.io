@@ -32,13 +32,29 @@ var head = document.getElementsByTagName('HEAD')[0];
                 image2.parentElement.style.display = "block";
         }
 
-	window.addEventListener("orientationchange", function() {
-	    if ((window.orientation ==0) || (window.orientation == 180)) {
-	    	document.documentElement.style.setProperty("--map-window-height", "200px");
-	    } else if ((window.orientation == -90) || (window.orientation == 90))  {
-	    	document.documentElement.style.setProperty("--map-window-height", "300px");
-	    }
-	}, false);
+        lock_control = document.getElementById("lock_control");
+        if (lock_control) {
+            window.addEventListener("orientationchange", function() {
+            if ((window.orientation ==0) || (window.orientation == 180)) {
+                document.documentElement.style.setProperty("--map-window-height", "200px");
+            } else if ((window.orientation == -90) || (window.orientation == 90))  {
+                document.documentElement.style.setProperty("--map-window-height", "300px");
+            }
+        }, false);    
 
+            pic = lock_control.querySelectorAll("img")[0];
+            pic.src = "https://7oakswelcomesrefugees.github.io/GoogleMapsLogo.png";
+
+            sentence = lock_control.querySelectorAll("p")[0];
+            sentence.innerHTML = "Click to load Google map"
+
+            document.getElementById('top_overlay').addEventListener('click', loadMap);
+
+        }
+	
+        function loadMap(e) {
+                let root = document.documentElement;
+                root.style.setProperty('--map-window-height', "100%");
+        }
 
 }
