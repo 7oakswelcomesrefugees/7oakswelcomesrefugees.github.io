@@ -51,45 +51,16 @@ var head = document.getElementsByTagName('HEAD')[0];
             top_overlay = document.getElementById('top_overlay');
             top_overlay.removeEventListener('click',unlockMap);
             top_overlay.removeEventListener('click',lockMap);
-            top_overlay.addEventListener('click', expandMap);
+            top_overlay.addEventListener('click', loadMap);
             
-            lock_pic=document.getElementById("lock_pic");
-                lock_pic.src = "https://7oakswelcomesrefugees.github.io/reduceMapIcon.png";
-                lock_pic.addEventListener('click', reduceMap);
 
 
         }
 	
-        function expandMap(e) {
-                let root = document.documentElement;
-                root.style.setProperty('--map-window-height', "100%");
-
-                lock_pic=document.getElementById("lock_pic");
-                lock_pic.style.display ="block"; 
-
-                         unlock_div=document.getElementById("unlock_div")
-                      unlock_div.style.display= "none"; 
-                      translucent_div=document.getElementById("translucent_div")
-                      translucent_div.style.display= "none"; 
-                    top_overlay=document.getElementById("top_overlay");
-                    top_overlay.style.display = "none";
-                      
+        function loadMap(e) {
+              map_url = "https://www.google.com/maps/d/u/1/viewer?mid=13-swUGe96NuWXLNk908U2j6azFBWZKZL&ll=51.28007648128535%2C0.20557084999995823&z=15";
+              window.open(url);
                 
-        }
-        function reduceMap(e) {
-                let root = document.documentElement;
-                root.style.setProperty('--map-window-height', "200px");
-
-                lock_pic=document.getElementById("lock_pic");
-                lock_pic.style.display ="none"; 
-
-                         unlock_div=document.getElementById("unlock_div")
-                      unlock_div.style.display= "block"; 
-                      translucent_div=document.getElementById("translucent_div")
-                      translucent_div.style.display= "block"; 
-                    top_overlay=document.getElementById("top_overlay");
-                    top_overlay.style.display = "block";
-                      
         }
 
 }
