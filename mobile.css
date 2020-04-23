@@ -42,6 +42,7 @@ a.aboutus {
 }
 
 #lock_control {
+	width:300px;
 	left: 53%; 
 	top: 58%;
 }
