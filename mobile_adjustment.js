@@ -52,7 +52,10 @@ var head = document.getElementsByTagName('HEAD')[0];
             top_overlay.removeEventListener('click',unlockMap);
             top_overlay.removeEventListener('click',lockMap);
             top_overlay.addEventListener('click', expandMap);
-            top_overlay.addEventListener('click', reduceMap);
+            
+            lock_pic=document.getElementById("lock_pic");
+                lock_pic.src = "https://7oakswelcomesrefugees.github.io/reduceMapIcon.png";
+                lock_pic.addEventListener('click', reduceMap);
 
 
         }
@@ -62,7 +65,6 @@ var head = document.getElementsByTagName('HEAD')[0];
                 root.style.setProperty('--map-window-height', "100%");
 
                 lock_pic=document.getElementById("lock_pic");
-                lock_pic.src = "https://7oakswelcomesrefugees.github.io/reduceMapIcon.png"
                 lock_pic.style.display ="block"; 
 
                          unlock_div=document.getElementById("unlock_div")
