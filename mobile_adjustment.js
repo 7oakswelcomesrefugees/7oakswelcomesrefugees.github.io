@@ -32,14 +32,14 @@ var head = document.getElementsByTagName('HEAD')[0];
                 image2.parentElement.style.display = "block";
         }
 
-        map_height = Math.round(screen.height*(1/3));
+        map_height = Math.round(screen.height*(0.27));
         document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
 
         lock_control = document.getElementById("lock_control");
         if (lock_control) {
             window.addEventListener("orientationchange", function() {
             if ((window.orientation ==0) || (window.orientation == 180)) {
-                map_height = Math.round(screen.height*(1/3));
+                map_height = Math.round(screen.height*(0.27));
         document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
                 document.getElementById("map_iframe").height = 200;
             } else if ((window.orientation == -90) || (window.orientation == 90))  {
