@@ -50,17 +50,23 @@ if (screen_width < 1000) {
         parent_height = parent_frame.contentWindow.innerHeight;
         map_height = Math.round(parent_height*0.6);
         document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
+        document.getElementById("map_iframe").height = map_height;
 
         lock_control = document.getElementById("lock_control");
-        if (lock_control) {
+        if (lock_control && screen_width < 320) {
             window.addEventListener("orientationchange", function() {
             if ((window.orientation ==0) || (window.orientation == 180)) {
+                parent_frame = parent.document.getElementsByTagName('iframe')[0];
+                parent_height = parent_frame.contentWindow.innerHeight;
                 map_height = Math.round(parent_height*0.6);
-        document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
-                document.getElementById("map_iframe").height = 200;
+                document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
+                document.getElementById("map_iframe").height = map_height;
             } else if ((window.orientation == -90) || (window.orientation == 90))  {
+                parent_frame = parent.document.getElementsByTagName('iframe')[0];
+                parent_height = parent_frame.contentWindow.innerHeight;
                 map_height = Math.round(parent_height*0.6);
-        document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
+                document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
+                document.getElementById("map_iframe").height = map_height;
             }
         }, false);    
 
