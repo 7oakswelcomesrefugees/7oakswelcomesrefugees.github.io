@@ -46,43 +46,46 @@ if (screen_width < 1000) {
                 image2.parentElement.style.display = "block";
         }
 
-        parent_frame = parent.document.getElementsByTagName('iframe')[0];
-        parent_height = parent_frame.contentWindow.innerHeight;
-        map_height = Math.round(parent_height*0.6);
-        document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
-        document.getElementById("map_iframe").height = map_height;
-
         lock_control = document.getElementById("lock_control");
-        if (lock_control && screen_width < 320) {
-            window.addEventListener("orientationchange", function() {
-            if ((window.orientation ==0) || (window.orientation == 180)) {
-                parent_frame = parent.document.getElementsByTagName('iframe')[0];
-                parent_height = parent_frame.contentWindow.innerHeight;
-                map_height = Math.round(parent_height*0.6);
-                document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
-                document.getElementById("map_iframe").height = map_height;
-            } else if ((window.orientation == -90) || (window.orientation == 90))  {
-                parent_frame = parent.document.getElementsByTagName('iframe')[0];
-                parent_height = parent_frame.contentWindow.innerHeight;
-                map_height = Math.round(parent_height*0.6);
-                document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
-                document.getElementById("map_iframe").height = map_height;
+        if (lock_control) {
+            parent_frame = parent.document.getElementsByTagName('iframe')[0];
+            parent_height = parent_frame.contentWindow.innerHeight;
+            map_height = Math.round(parent_height*0.6);
+            document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
+            document.getElementById("map_iframe").height = map_height;
+
+        
+            if (screen_width < 320) {
+                window.addEventListener("orientationchange", function() {
+                    if ((window.orientation ==0) || (window.orientation == 180)) {
+                        parent_frame = parent.document.getElementsByTagName('iframe')[0];
+                        parent_height = parent_frame.contentWindow.innerHeight;
+                        map_height = Math.round(parent_height*0.6);
+                        document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
+                        document.getElementById("map_iframe").height = map_height;
+                    } else if ((window.orientation == -90) || (window.orientation == 90))  {
+                        parent_frame = parent.document.getElementsByTagName('iframe')[0];
+                        parent_height = parent_frame.contentWindow.innerHeight;
+                        map_height = Math.round(parent_height*0.6);
+                        document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
+                        document.getElementById("map_iframe").height = map_height;
+                    }
+                }, false);    
+
+                pic = lock_control.querySelectorAll("img")[0];
+                pic.src = "https://7oakswelcomesrefugees.github.io/GoogleMapsLogo.png";
+
+                sentence = lock_control.querySelectorAll("p")[0];
+                sentence.innerHTML = "Click to load Google map"
+
+                top_overlay = document.getElementById('top_overlay');
+                top_overlay.removeEventListener('click',unlockMap);
+                top_overlay.removeEventListener('click',lockMap);
+                top_overlay.addEventListener('click', loadMap);
+                
+
+
             }
-        }, false);    
-
-            pic = lock_control.querySelectorAll("img")[0];
-            pic.src = "https://7oakswelcomesrefugees.github.io/GoogleMapsLogo.png";
-
-            sentence = lock_control.querySelectorAll("p")[0];
-            sentence.innerHTML = "Click to load Google map"
-
-            top_overlay = document.getElementById('top_overlay');
-            top_overlay.removeEventListener('click',unlockMap);
-            top_overlay.removeEventListener('click',lockMap);
-            top_overlay.addEventListener('click', loadMap);
-            
-
-
         }
 	
         function loadMap(e) {
