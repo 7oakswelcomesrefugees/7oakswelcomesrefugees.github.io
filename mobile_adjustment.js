@@ -36,9 +36,10 @@ var head = document.getElementsByTagName('HEAD')[0];
         if (lock_control) {
             window.addEventListener("orientationchange", function() {
             if ((window.orientation ==0) || (window.orientation == 180)) {
-                document.documentElement.style.setProperty("--map-window-height", "38%");
+                document.documentElement.style.setProperty("--map-window-height", "75%");
+                document.getElementById("map_iframe").height = 200;
             } else if ((window.orientation == -90) || (window.orientation == 90))  {
-                document.documentElement.style.setProperty("--map-window-height", "60%");
+                document.documentElement.style.setProperty("--map-window-height", "75%");
             }
         }, false);    
 
