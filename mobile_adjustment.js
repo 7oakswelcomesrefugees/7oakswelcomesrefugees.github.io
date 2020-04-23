@@ -3,6 +3,17 @@
  */
 
 var screen_width = screen.width;
+if (screen_width < 1000) {
+    if (document.getElementsByClassName("aboutus")) {
+        parent_frame = parent.document.getElementsByTagName('iframe')[0];
+        parent_height = parent_frame.contentWindow.innerHeight;
+        dynamic_fontsize = Math.round(parent_height/2.5);
+
+        document.getElementsByTagName("a")[0].style.fontSize = dynamic_fontsize.toString() + "px";
+    }
+}
+
+
 if (screen_width < 480 ) {
 var head = document.getElementsByTagName('HEAD')[0];  
   
@@ -18,6 +29,8 @@ var head = document.getElementsByTagName('HEAD')[0];
   
         // Append link element to HTML head 
         head.appendChild(link);
+
+
 
         if (document.getElementById("family_testimonials")) {
                 image1 = document.getElementById("image1");
