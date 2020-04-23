@@ -31,7 +31,7 @@ a.aboutus {
 }
 
 #map_iframe {
-	height: 75%;
+	height: var(--map-window-height);
 }
 
 .overlay {
