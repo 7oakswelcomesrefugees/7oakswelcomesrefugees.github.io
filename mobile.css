@@ -46,3 +46,9 @@ a.aboutus {
 	left: 53%; 
 	top: 58%;
 }
+
+#translucent_div {
+		z-index: 97; 
+		background-color: white; 
+		opacity: 0.7;
+	}
