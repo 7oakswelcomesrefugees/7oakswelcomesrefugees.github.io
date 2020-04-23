@@ -4,7 +4,7 @@
 
 var screen_width = screen.width;
 if (screen_width < 1000) {
-    if (document.getElementsByClassName("aboutus")) {
+    if (document.getElementsByClassName("aboutus")[0]) {
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
         parent_height = parent_frame.contentWindow.innerHeight;
