@@ -58,8 +58,10 @@ var head = document.getElementsByTagName('HEAD')[0];
         }
 	
         function loadMap(e) {
-              map_url = "https://www.google.com/maps/d/u/1/viewer?mid=13-swUGe96NuWXLNk908U2j6azFBWZKZL&ll=51.28007648128535%2C0.20557084999995823&z=15";
-              window.open(url);
+            map_url = "https://www.google.com/maps/d/u/1/viewer?mid=13-swUGe96NuWXLNk908U2j6azFBWZKZL&ll=51.28007648128535%2C0.20557084999995823&z=15";
+            var aTag = document.createElement('a');
+            aTag.setAttribute('href',map_url);
+              aTag.click();
                 
         }
 
