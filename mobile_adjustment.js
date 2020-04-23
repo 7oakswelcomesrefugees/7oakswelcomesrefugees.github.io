@@ -14,11 +14,9 @@ if (screen_width < 1000) {
         trustee_id.style.fontSize = dynamic_fontsize.toString() + "px";
         trustee_id.parentElement.style.marginTop = "-2px";
     }
-}
 
 
-if (screen_width < 480 ) {
-var head = document.getElementsByTagName('HEAD')[0];  
+        var head = document.getElementsByTagName('HEAD')[0];  
   
         // Create new link Element 
         var link = document.createElement('link'); 
@@ -48,18 +46,20 @@ var head = document.getElementsByTagName('HEAD')[0];
                 image2.parentElement.style.display = "block";
         }
 
-        map_height = Math.round(screen.height*(0.25));
+        parent_frame = parent.document.getElementsByTagName('iframe')[0];
+        parent_height = parent_frame.contentWindow.innerHeight;
+        map_height = Math.round(parent_height*0.6);
         document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
 
         lock_control = document.getElementById("lock_control");
         if (lock_control) {
             window.addEventListener("orientationchange", function() {
             if ((window.orientation ==0) || (window.orientation == 180)) {
-                map_height = Math.round(window.innerHeight*(0.45));
+                map_height = Math.round(parent_height*0.6);
         document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
                 document.getElementById("map_iframe").height = 200;
             } else if ((window.orientation == -90) || (window.orientation == 90))  {
-                map_height = Math.round(window.innerHeight*(0.7));
+                map_height = Math.round(parent_height*0.6);
         document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
             }
         }, false);    
