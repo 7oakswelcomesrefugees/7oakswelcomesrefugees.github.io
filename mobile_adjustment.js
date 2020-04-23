@@ -9,7 +9,9 @@ if (screen_width < 1000) {
         parent_height = parent_frame.contentWindow.innerHeight;
         dynamic_fontsize = Math.round(parent_height/2.5);
 
-        document.getElementsByTagName("a")[0].style.fontSize = dynamic_fontsize.toString() + "px";
+        trustee_id = document.getElementsByTagName("a")[0];
+        trustee_id.style.fontSize = dynamic_fontsize.toString() + "px";
+        trustee_id.parentElement.style.marginTop = "-2px";
     }
 }
 
