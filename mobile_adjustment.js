@@ -48,13 +48,47 @@ var head = document.getElementsByTagName('HEAD')[0];
             sentence = lock_control.querySelectorAll("p")[0];
             sentence.innerHTML = "Click to load Google map"
 
-            document.getElementById('top_overlay').addEventListener('click', loadMap);
+            top_overlay = document.getElementById('top_overlay');
+            top_overlay.removeEventListener('click',unlockMap);
+            top_overlay.removeEventListener('click',lockMap);
+            top_overlay.addEventListener('click', expandMap);
+            top_overlay.addEventListener('click', reduceMap);
+
 
         }
 	
-        function loadMap(e) {
+        function expandMap(e) {
                 let root = document.documentElement;
                 root.style.setProperty('--map-window-height', "100%");
+
+                lock_pic=document.getElementById("lock_pic");
+                lock_pic.src = "https://7oakswelcomesrefugees.github.io/reduceMapIcon.png"
+                lock_pic.style.display ="block"; 
+
+                         unlock_div=document.getElementById("unlock_div")
+                      unlock_div.style.display= "none"; 
+                      translucent_div=document.getElementById("translucent_div")
+                      translucent_div.style.display= "none"; 
+                    top_overlay=document.getElementById("top_overlay");
+                    top_overlay.style.display = "none";
+                      
+                
+        }
+        function reduceMap(e) {
+                let root = document.documentElement;
+                root.style.setProperty('--map-window-height', "200px");
+
+                lock_pic=document.getElementById("lock_pic");
+                lock_pic.src = "reduceMapIcon.png"
+                lock_pic.style.display ="block"; 
+
+                         unlock_div=document.getElementById("unlock_div")
+                      unlock_div.style.display= "none"; 
+                      translucent_div=document.getElementById("translucent_div")
+                      translucent_div.style.display= "none"; 
+                    top_overlay=document.getElementById("top_overlay");
+                    top_overlay.style.display = "block";
+                      
         }
 
 }
