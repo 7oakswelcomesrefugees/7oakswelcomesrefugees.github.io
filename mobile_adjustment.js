@@ -18,6 +18,17 @@ if (screen_width < 1000) {
         trustee_id.parentElement.style.marginTop = "-2px";
     }
 
+    if (document.getElementsByClassName("contactus")[0]) {
+        address_blurb = document.getElementById("addressblurb");
+        address_blurb.style.paddingLeft = "10%";
+
+        parent_frame = parent.document.getElementsByTagName('iframe')[0];
+        parent_frame.scrolling="no";
+        parent_height = parent_frame.contentWindow.innerHeight;
+        dynamic_fontsize = Math.round(parent_height/8);
+        address_blurb.style.fontSize = dynamic_fontsize.toString() + "px";
+    }
+
         if (screen_width < 480) {
             var head = document.getElementsByTagName('HEAD')[0];  
       
