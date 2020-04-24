@@ -1,4 +1,4 @@
-/*  Javascript to adjust display for mobile/tablet displays
+/*  Javascript to adjust display of certain elements within website for mobile/tablet displays
     Includes additional mobile.css stylesheet to overwrite some aspects of the default css styling
 
 Script include tag:
