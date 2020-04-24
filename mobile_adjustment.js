@@ -143,11 +143,17 @@ if (screen_width < 1000) {
                 if ((window.orientation ==0) || (window.orientation == 180)) {
                     console.log("rotated");
                     map_height = getMapHeight();
+                    console.log(map_height);
+                    console.log(document.documentElement);
+                    console.log(document);
                     document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
                     document.getElementById("map_iframe").height = map_height;
                 } else if ((window.orientation == -90) || (window.orientation == 90))  {
                     console.log("rotated");
                     map_height = getMapHeight();
+                    console.log(map_height);
+                    console.log(document.documentElement);
+                    console.log(document);
                     document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
                     document.getElementById("map_iframe").height = map_height;
                 }
