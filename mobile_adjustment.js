@@ -138,8 +138,7 @@ if (screen_width < 1000) {
         document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
         document.getElementById("map_iframe").height = map_height;
 
-        if (screen_width < 480) {
-            window.addEventListener("orientationchange", function() {
+        window.addEventListener("orientationchange", function() {
                 if ((window.orientation ==0) || (window.orientation == 180)) {
                     map_height = getMapHeight();
                     document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
@@ -150,6 +149,8 @@ if (screen_width < 1000) {
                     document.getElementById("map_iframe").height = map_height;
                 }
             }, false);    
+
+        if (screen_width < 480) {
 
             pic = lock_control.querySelectorAll("img")[0];
             pic.src = "https://7oakswelcomesrefugees.github.io/GoogleMapsLogo.png";
