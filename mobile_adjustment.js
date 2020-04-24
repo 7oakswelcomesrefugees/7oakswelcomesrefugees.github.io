@@ -56,6 +56,7 @@ if (document.getElementsByClassName("donate")[0]) {
 
     function adjustBankTable() {
        cells = document.getElementsByTagName("td");
+       console.log("rotated");
         for (var i=0; i< cells.length; i++) {
         
             cells[i].style.fontSize = dynamic_fontsize.toString() + "px";
@@ -238,10 +239,15 @@ if (active_embed) {
         if (active_embed == "address_blurb") { updateFunction = adjustAddressBlurb; }
         if (active_embed == "family_testimonials") { updateFunction = adjustFamilyTestimonials; }
         if (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
+        console.log(updateFunction);
             if ((window.orientation ==0) || (window.orientation == 180)) {
+                console.log("rotated");
+                console.log(window);
                 setTimeout(updateFunction, 1000); //timeout may be unecessary, artifact introduced by emulator service?
                 //updateFunction();
             } else if ((window.orientation == -90) || (window.orientation == 90))  {
+                console.log("rotated");
+                console.log(window);
                 setTimeout(updateFunction, 1000); 
             }   //updateFunction();
     }, false);    
