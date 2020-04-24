@@ -241,10 +241,10 @@ if (active_embed == "trustee_id") { updateFunction = adjustTrusteeId; }
 if (active_embed == "address_blurb") { updateFunction = adjustAddressBlurb; }
 if (active_embed == "family_testimonials") { updateFunction = adjustFamilyTestimonials; }
 if (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
+console.log(updateFunction);
 
 if (active_embed) {
     window.addEventListener("orientationchange", function() {
-        console.log(updateFunction);
             if ((window.orientation ==0) || (window.orientation == 180)) {
                 console.log("rotated");
                 console.log(window);
