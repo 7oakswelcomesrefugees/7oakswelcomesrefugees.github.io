@@ -48,9 +48,7 @@ if (screen_width < 1000) {
 
         lock_control = document.getElementById("lock_control");
         if (lock_control) {
-            parent_frame = parent.document.getElementsByTagName('iframe')[0];
-            parent_height = parent_frame.contentWindow.innerHeight;
-            map_height = Math.round(parent_height*0.6);
+            map_height = getMapHeight();
             document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
             document.getElementById("map_iframe").height = map_height;
 
@@ -58,15 +56,11 @@ if (screen_width < 1000) {
             if (screen_width < 320) {
                 window.addEventListener("orientationchange", function() {
                     if ((window.orientation ==0) || (window.orientation == 180)) {
-                        parent_frame = parent.document.getElementsByTagName('iframe')[0];
-                        parent_height = parent_frame.contentWindow.innerHeight;
-                        map_height = Math.round(parent_height*0.6);
+                        map_height = getMapHeight();
                         document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
                         document.getElementById("map_iframe").height = map_height;
                     } else if ((window.orientation == -90) || (window.orientation == 90))  {
-                        parent_frame = parent.document.getElementsByTagName('iframe')[0];
-                        parent_height = parent_frame.contentWindow.innerHeight;
-                        map_height = Math.round(parent_height*0.6);
+                        map_height = getMapHeight();
                         document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
                         document.getElementById("map_iframe").height = map_height;
                     }
@@ -97,6 +91,13 @@ if (screen_width < 1000) {
             //  aTag.click();
             window.open(map_url);
                 
+        }
+
+        function getMapHeight() {
+            parent_frame = parent.document.getElementsByTagName('iframe')[0];
+            parent_height = parent_frame.contentWindow.innerHeight;
+            map_height = Math.round(parent_height*0.8);
+            return map_height;
         }
 
 }
