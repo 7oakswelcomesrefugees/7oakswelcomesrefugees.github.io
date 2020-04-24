@@ -252,7 +252,7 @@ if (active_embed) {
             if ((window.orientation ==0) || (window.orientation == 180)) {
                 console.log("rotated");
                 console.log(window);
-                setTimeout(updateFunction, 1000); //timeout may be unecessary, artifact introduced by emulator service?
+                setTimeout(updateFunction, 1000); //timeout may be unecessary, artifact introduced by smaller screen emulator service?
                 //updateFunction();
             } else if ((window.orientation == -90) || (window.orientation == 90))  {
                 console.log("rotated");
