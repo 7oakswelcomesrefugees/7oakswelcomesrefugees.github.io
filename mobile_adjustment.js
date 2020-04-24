@@ -57,7 +57,7 @@ if (document.getElementsByClassName("donate")[0]) {
     function adjustBankTable() {
         console.log("bank table");
 
-       cells = document.getElementsByTagName("td");
+        cells = document.getElementsByTagName("td");
        
         for (var i=0; i< cells.length; i++) {
         
@@ -78,7 +78,7 @@ if (document.getElementsByClassName("donate")[0]) {
         
     }
     function adjustChequeAddress() {
-        console.log("bank table");
+        console.log("cheque address");
 
         cells = document.getElementsByTagName("p");     
         for (var i=0; i< cells.length; i++) {
