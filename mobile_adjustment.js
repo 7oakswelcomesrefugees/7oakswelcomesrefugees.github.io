@@ -5,7 +5,7 @@ Script include tag:
 <script type="text/javascript" src="https://7oakswelcomesrefugees.github.io/mobile_adjustment.js"></script>
  */
 
-var screen_width = screen.width;
+var screen_width = window.width;
 if (screen_width < 1000) {
 
     if (document.getElementsByClassName("donate")[0]) {
