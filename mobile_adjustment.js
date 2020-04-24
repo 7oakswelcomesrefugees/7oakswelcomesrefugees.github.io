@@ -78,6 +78,9 @@ if (document.getElementsByClassName("donate")[0]) {
     }
     function adjustChequeAddress() {
         console.log("cheque address");
+
+        parent_frame = parent.document.getElementsByTagName('iframe')[0];
+        parent_height = parent_frame.contentWindow.innerHeight;
         dynamic_fontsize = Math.round(parent_height/7.5);
         new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
 
