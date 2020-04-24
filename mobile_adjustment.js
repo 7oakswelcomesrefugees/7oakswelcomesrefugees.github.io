@@ -230,15 +230,16 @@ if (screen_width < 1000) {
 
 }
 
+var updateFunction;
+if (active_embed == "bank_table") { updateFunction = adjustBankTable; }
+if (active_embed == "cheque_address") { updateFunction = adjustChequeAddress; }
+if (active_embed == "trustee_id") { updateFunction = adjustTrusteeId; }
+if (active_embed == "address_blurb") { updateFunction = adjustAddressBlurb; }
+if (active_embed == "family_testimonials") { updateFunction = adjustFamilyTestimonials; }
+if (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
+
 if (active_embed) {
     window.addEventListener("orientationchange", function() {
-        var updateFunction;
-        if (active_embed == "bank_table") { updateFunction = adjustBankTable; }
-        if (active_embed == "cheque_address") { updateFunction = adjustChequeAddress; }
-        if (active_embed == "trustee_id") { updateFunction = adjustTrusteeId; }
-        if (active_embed == "address_blurb") { updateFunction = adjustAddressBlurb; }
-        if (active_embed == "family_testimonials") { updateFunction = adjustFamilyTestimonials; }
-        if (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
         console.log(updateFunction);
             if ((window.orientation ==0) || (window.orientation == 180)) {
                 console.log("rotated");
