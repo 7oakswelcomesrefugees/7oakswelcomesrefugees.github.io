@@ -9,45 +9,45 @@ var screen_width = screen.width;
 if (screen_width < 1000) {
 
     if (document.getElementsByClassName("donate")[0]) {
-        if (screen_width < 480 ) {
-            //var els = contains('td', ':');
-            //for (var i = 0; i < els.length; i++) {
-            //  els[i].remove();
-            //}
-            table = document.querySelectorAll('table.donate')[0];
-            if (table) {
-                table.style.paddingLeft = 0;
+        // if (screen_width < 480 ) {
+        //     //var els = contains('td', ':');
+        //     //for (var i = 0; i < els.length; i++) {
+        //     //  els[i].remove();
+        //     //}
+        //     table = document.querySelectorAll('table.donate')[0];
+        //     if (table) {
+        //         table.style.paddingLeft = 0;
 
-                rows = table.rows;
-                for (var i =0; i < rows.length; i++) {
-                    right_cell = rows[i].cells[1];
-                    right_cell.style.padding = 0;
-                }
+        //         rows = table.rows;
+        //         for (var i =0; i < rows.length; i++) {
+        //             right_cell = rows[i].cells[1];
+        //             right_cell.style.padding = 0;
+        //         }
 
-                var els = contains('td', 'Bank');
-                els[0].style.paddingLeft = 0;
-                var els = contains('td', 'Acc Name');
-                els[0].textContent = "Name:";
-                els[0].style.paddingLeft = 0;
-                var els = contains('td', 'Sort Code');
-                els[0].textContent = "Sort:";
-                els[0].style.paddingLeft = 0;
-                var els = contains('td', 'Acc No');
-                els[0].textContent = "Acc:";
-                els[0].style.paddingLeft = 0;
-            }
-        }
+        //         var els = contains('td', 'Bank');
+        //         els[0].style.paddingLeft = 0;
+        //         var els = contains('td', 'Acc Name');
+        //         els[0].textContent = "Name:";
+        //         els[0].style.paddingLeft = 0;
+        //         var els = contains('td', 'Sort Code');
+        //         els[0].textContent = "Sort:";
+        //         els[0].style.paddingLeft = 0;
+        //         var els = contains('td', 'Acc No');
+        //         els[0].textContent = "Acc:";
+        //         els[0].style.paddingLeft = 0;
+        //     }
+        // }
 
-        function contains(selector, text) {
-          var elements = document.querySelectorAll(selector);
-          return [].filter.call(elements, function(element){
-            return RegExp(text).test(element.textContent);
-          });   
-        }
+        // function contains(selector, text) {
+        //   var elements = document.querySelectorAll(selector);
+        //   return [].filter.call(elements, function(element){
+        //     return RegExp(text).test(element.textContent);
+        //   });   
+        // }
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_height = parent_frame.contentWindow.innerHeight;
-        dynamic_fontsize = Math.round(parent_height/7);
+        dynamic_fontsize = Math.round(parent_height/6.7);
 
         cells = document.getElementsByTagName("td");
         if (cells[0]) {
