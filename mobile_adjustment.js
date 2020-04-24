@@ -173,7 +173,7 @@ if (screen_width < 1000) {
         window.addEventListener("orientationchange", function() {
             console.log("rotated");
                 if ((window.orientation ==0) || (window.orientation == 180)) {
-                    //setTimeout(adjustGoogleMap, 1000); timeout may be unecessary, artefact introduced by emulator service?
+                    //setTimeout(adjustGoogleMap, 1000); //timeout may be unecessary, artefact introduced by emulator service?
                     adjustGoogleMap();
                 } else if ((window.orientation == -90) || (window.orientation == 90))  {
                     // setTimeout(adjustGoogleMap, 1000); 
@@ -239,7 +239,7 @@ if (active_embed) {
         if (active_embed == "family_testimonials") { updateFunction = adjustFamilyTestimonials; }
         if (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
             if ((window.orientation ==0) || (window.orientation == 180)) {
-                setTimeout(updateFunction, 1000); timeout may be unecessary, artifact introduced by emulator service?
+                setTimeout(updateFunction, 1000); //timeout may be unecessary, artifact introduced by emulator service?
                 //updateFunction();
             } else if ((window.orientation == -90) || (window.orientation == 90))  {
                 setTimeout(updateFunction, 1000); 
