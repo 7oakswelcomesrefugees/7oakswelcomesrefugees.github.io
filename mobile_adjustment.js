@@ -19,14 +19,18 @@ if (screen_width < 1000) {
     }
 
     if (document.getElementsByClassName("contactus")[0]) {
-        address_blurb = document.getElementById("addressblurb");
-        address_blurb.style.paddingLeft = "10%";
-
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
         parent_height = parent_frame.contentWindow.innerHeight;
+        parent_width = parent_frame.contentWindow.innerWidth;
+
+        address_blurb = document.getElementById("addressblurb");
+        
         dynamic_fontsize = Math.round(parent_height/8);
         address_blurb.style.fontSize = dynamic_fontsize.toString() + "px";
+
+        dynamic_padding = Math.round(parent_width*0.2);
+        address_blurb.style.paddingLeft = dynamic_padding.toString() + "px";
     }
 
         if (screen_width < 480) {
