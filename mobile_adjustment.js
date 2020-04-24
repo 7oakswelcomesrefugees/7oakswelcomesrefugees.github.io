@@ -249,16 +249,18 @@ console.log(updateFunction);
 
 if (active_embed) {
     window.addEventListener("orientationchange", function() {
-            if ((window.orientation ==0) || (window.orientation == 180)) {
-                console.log("rotated");
-                console.log(window);
-                setTimeout(updateFunction, 1000); //timeout may be unecessary, artifact introduced by smaller screen emulator service?
-                //updateFunction();
-            } else if ((window.orientation == -90) || (window.orientation == 90))  {
-                console.log("rotated");
-                console.log(window);
-                setTimeout(updateFunction, 1000); 
-            }   //updateFunction();
+        console.log("rotated");
+        console.log(window);
+        updateFunction();
+        //setTimeout(updateFunction, 1000); 
+        // if ((window.orientation ==0) || (window.orientation == 180)) {
+        //     console.log("rotated");
+        //     console.log(window);
+        //     setTimeout(updateFunction, 1000); //timeout may be unecessary, artifact introduced by smaller screen emulator service?
+        //     //updateFunction();
+        // } else if ((window.orientation == -90) || (window.orientation == 90))  {
+            
+        // }   //updateFunction();
     }, false);    
     
 active_embed == "cheque_address";
