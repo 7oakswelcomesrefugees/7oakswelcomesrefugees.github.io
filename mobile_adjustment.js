@@ -56,7 +56,7 @@ if (screen_width < 1000) {
             document.getElementById("map_iframe").height = map_height;
 
         
-            if (screen_width < 320) {
+            if (screen_width < 480) {
                 window.addEventListener("orientationchange", function() {
                     if ((window.orientation ==0) || (window.orientation == 180)) {
                         map_height = getMapHeight();
