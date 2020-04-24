@@ -55,8 +55,10 @@ if (document.getElementsByClassName("donate")[0]) {
     }
 
     function adjustBankTable() {
+        console.log("bank table");
+
        cells = document.getElementsByTagName("td");
-       console.log("rotated");
+       
         for (var i=0; i< cells.length; i++) {
         
             cells[i].style.fontSize = dynamic_fontsize.toString() + "px";
@@ -76,7 +78,9 @@ if (document.getElementsByClassName("donate")[0]) {
         
     }
     function adjustChequeAddress() {
-       cells = document.getElementsByTagName("p");     
+        console.log("bank table");
+
+        cells = document.getElementsByTagName("p");     
         for (var i=0; i< cells.length; i++) {
         
           cells[i].style.fontSize = dynamic_fontsize.toString() + "px";
