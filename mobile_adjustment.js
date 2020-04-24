@@ -1,4 +1,7 @@
-/* Script include tag:
+/*  Javascript to adjust display for mobile/tablet displays
+    Includes additional mobile.css stylesheet to overwrite some aspects of the default css styling
+
+Script include tag:
 <script type="text/javascript" src="https://7oakswelcomesrefugees.github.io/mobile_adjustment.js"></script>
  */
 
