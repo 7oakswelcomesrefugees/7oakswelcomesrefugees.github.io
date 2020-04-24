@@ -5,6 +5,7 @@ Script include tag:
 <script type="text/javascript" src="https://7oakswelcomesrefugees.github.io/mobile_adjustment.js"></script>
  */
 var active_embed;
+max_fontsize = 20;
 
 if (document.getElementsByClassName("donate")[0]) {
 
@@ -55,12 +56,13 @@ if (document.getElementsByClassName("donate")[0]) {
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_height = parent_frame.contentWindow.innerHeight;
         dynamic_fontsize = Math.round(parent_height/6.7);
+        new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
 
         cells = document.getElementsByTagName("td");
        
         for (var i=0; i< cells.length; i++) {
-        
-            cells[i].style.fontSize = dynamic_fontsize.toString() + "px";
+            
+            cells[i].style.fontSize = new_fontsize.toString() + "px";
           
             if (cells[i].innerText == "Sevenoaks Welcomes Refugees") {
                 cells[i].innerText = "Sevenoaks W. R.";
@@ -77,11 +79,12 @@ if (document.getElementsByClassName("donate")[0]) {
     function adjustChequeAddress() {
         console.log("cheque address");
         dynamic_fontsize = Math.round(parent_height/7.5);
+        new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
 
         cells = document.getElementsByTagName("p");     
         for (var i=0; i< cells.length; i++) {
         
-          cells[i].style.fontSize = dynamic_fontsize.toString() + "px";
+          cells[i].style.fontSize = new_fontsize.toString() + "px";
         }
     }
 }
