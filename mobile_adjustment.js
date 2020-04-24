@@ -4,8 +4,10 @@
 Script include tag:
 <script type="text/javascript" src="https://7oakswelcomesrefugees.github.io/mobile_adjustment.js"></script>
  */
+var active_embed;
 
 if (document.getElementsByClassName("donate")[0]) {
+
     // if (screen_width < 480 ) {
     //     //var els = contains('td', ':');
     //     //for (var i = 0; i < els.length; i++) {
@@ -48,6 +50,12 @@ if (document.getElementsByClassName("donate")[0]) {
 
     cells = document.getElementsByTagName("td");
     if (cells[0]) {
+        active_embed = "bank_table";
+        adjustBankTable();
+    }
+
+    function adjustBankTable() {
+       cells = document.getElementsByTagName("td");
         for (var i=0; i< cells.length; i++) {
         
             cells[i].style.fontSize = dynamic_fontsize.toString() + "px";
@@ -62,6 +70,12 @@ if (document.getElementsByClassName("donate")[0]) {
 
     cells = document.getElementsByTagName("p");
     if (cells[0]) {
+        active_embed = "cheque_address";
+        adjustChequeAddress();
+        
+    }
+    function adjustChequeAddress() {
+       cells = document.getElementsByTagName("p");     
         for (var i=0; i< cells.length; i++) {
         
           cells[i].style.fontSize = dynamic_fontsize.toString() + "px";
@@ -75,29 +89,42 @@ if (screen_width < 1000) {
 
 
     if (document.getElementsByClassName("aboutus")[0]) {
-        parent_frame = parent.document.getElementsByTagName('iframe')[0];
-        parent_frame.scrolling="no";
-        parent_height = parent_frame.contentWindow.innerHeight;
-        dynamic_fontsize = Math.round(parent_height/2.5);
+        active_embed = "trustee_id";
+        adjustTrusteeId();
 
-        trustee_id = document.getElementsByTagName("a")[0];
-        trustee_id.style.fontSize = dynamic_fontsize.toString() + "px";
-        trustee_id.parentElement.style.marginTop = "-2px";
+        function adjustTrusteeId() {
+            parent_frame = parent.document.getElementsByTagName('iframe')[0];
+            parent_frame.scrolling="no";
+            parent_height = parent_frame.contentWindow.innerHeight;
+            dynamic_fontsize = Math.round(parent_height/2.5);
+
+            trustee_id = document.getElementsByTagName("a")[0];
+            trustee_id.style.fontSize = dynamic_fontsize.toString() + "px";
+            trustee_id.parentElement.style.marginTop = "-2px";
+        }
+        
     }
 
     if (document.getElementsByClassName("contactus")[0]) {
-        parent_frame = parent.document.getElementsByTagName('iframe')[0];
-        parent_frame.scrolling="no";
-        parent_height = parent_frame.contentWindow.innerHeight;
-        parent_width = parent_frame.contentWindow.innerWidth;
+        active_embed = "address_blurb";
+        adjustAddressBlurb();
 
-        address_blurb = document.getElementById("addressblurb");
+        function adjustAddressBlurb() {
+            parent_frame = parent.document.getElementsByTagName('iframe')[0];
+            parent_frame.scrolling="no";
+            parent_height = parent_frame.contentWindow.innerHeight;
+            parent_width = parent_frame.contentWindow.innerWidth;
+
+            address_blurb = document.getElementById("addressblurb");
+            
+            dynamic_fontsize = Math.round(parent_height/8);
+            address_blurb.style.fontSize = dynamic_fontsize.toString() + "px";
+
+            dynamic_padding = Math.round(parent_width*0.11);
+            address_blurb.style.paddingLeft = dynamic_padding.toString() + "px";
+        }
+
         
-        dynamic_fontsize = Math.round(parent_height/8);
-        address_blurb.style.fontSize = dynamic_fontsize.toString() + "px";
-
-        dynamic_padding = Math.round(parent_width*0.11);
-        address_blurb.style.paddingLeft = dynamic_padding.toString() + "px";
     }
 
     if (screen_width < 480) {
@@ -120,6 +147,10 @@ if (screen_width < 1000) {
 
 
     if (document.getElementById("family_testimonials")) {
+        active_embed = "family_testimonials";
+        adjustFamilyTestimonials();
+
+        function adjustFamilyTestimonials() {
             image1 = document.getElementById("image1");
             image2 = document.getElementById("image2");
             image1.src = "https://7oakswelcomesrefugees.github.io/RefugeeSpeechBubbles_splitA.png"
@@ -130,22 +161,23 @@ if (screen_width < 1000) {
             image2.parentElement.style.width = "100%";
             image2.parentElement.style.padding = 0;
             image2.parentElement.style.display = "block";
+        }
     }
 
     lock_control = document.getElementById("lock_control");
     if (lock_control) {
-        map_height = getMapHeight();
-        document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
-        document.getElementById("map_iframe").height = map_height;
+        active_embed = "google_map";
+
+        adjustGoogleMap();
 
         window.addEventListener("orientationchange", function() {
             console.log("rotated");
                 if ((window.orientation ==0) || (window.orientation == 180)) {
-                    //setTimeout(adjustForRotation, 1000); timeout may be unecessary, artefact introduced by emulator service?
-                    adjustForRotation();
+                    //setTimeout(adjustGoogleMap, 1000); timeout may be unecessary, artefact introduced by emulator service?
+                    adjustGoogleMap();
                 } else if ((window.orientation == -90) || (window.orientation == 90))  {
-                    // setTimeout(adjustForRotation, 1000); 
-                }   adjustForRotation();
+                    // setTimeout(adjustGoogleMap, 1000); 
+                }   adjustGoogleMap();
             }, false);    
 
         if (screen_width < 480) {
@@ -166,12 +198,12 @@ if (screen_width < 1000) {
         }
     }
 
-    function adjustForRotation() {
-        console.log("rotated");
+    function adjustGoogleMap() {
+       // console.log("rotated");
         map_height = getMapHeight();
-        console.log(map_height);
-        console.log(document.documentElement);
-        console.log(document);
+        //console.log(map_height);
+        //console.log(document.documentElement);
+        //console.log(document);
         document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
         document.getElementById("map_iframe").height = map_height;
     }
@@ -195,4 +227,28 @@ if (screen_width < 1000) {
         return map_height;
     }
 
+}
+
+if (active_embed) {
+    window.addEventListener("orientationchange", function() {
+        var updateFunction;
+        if (active_embed == "bank_table") { updateFunction = adjustBankTable; }
+        if (active_embed == "cheque_address") { updateFunction = adjustChequeAddress; }
+        if (active_embed == "trustee_id") { updateFunction = adjustTrusteeId; }
+        if (active_embed == "address_blurb") { updateFunction = adjustAddressBlurb; }
+        if (active_embed == "family_testimonials") { updateFunction = adjustFamilyTestimonials; }
+        if (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
+            if ((window.orientation ==0) || (window.orientation == 180)) {
+                setTimeout(updateFunction, 1000); timeout may be unecessary, artifact introduced by emulator service?
+                //updateFunction();
+            } else if ((window.orientation == -90) || (window.orientation == 90))  {
+                setTimeout(updateFunction, 1000); 
+            }   //updateFunction();
+    }, false);    
+    
+active_embed == "cheque_address";
+active_embed == "trustee_id";
+active_embed == "address_blurb";
+active_embed == "family_testimonials";
+active_embed == "google_map";
 }
