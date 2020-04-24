@@ -5,7 +5,7 @@ Script include tag:
 <script type="text/javascript" src="https://7oakswelcomesrefugees.github.io/mobile_adjustment.js"></script>
  */
 
-var screen_width = window.width;
+var screen_width = screen.width;
 if (screen_width < 1000) {
 
     if (document.getElementsByClassName("donate")[0]) {
@@ -15,25 +15,34 @@ if (screen_width < 1000) {
             //  els[i].remove();
             //}
             table = document.querySelectorAll('table.donate')[0];
-            table.style.paddingLeft = 0;
+            if (table) {
+                table.style.paddingLeft = 0;
 
-            rows = table.rows;
-            for (var i =0; i < rows.length; i++) {
-                right_cell = rows[i].cells[1];
-                right_cell.style.padding = 0;
+                rows = table.rows;
+                for (var i =0; i < rows.length; i++) {
+                    right_cell = rows[i].cells[1];
+                    right_cell.style.padding = 0;
+                }
+
+                var els = contains('td', 'Bank');
+                els[0].style.paddingLeft = 0;
+                var els = contains('td', 'Acc Name');
+                els[0].textContent = "Name:";
+                els[0].style.paddingLeft = 0;
+                var els = contains('td', 'Sort Code');
+                els[0].textContent = "Sort:";
+                els[0].style.paddingLeft = 0;
+                var els = contains('td', 'Acc No');
+                els[0].textContent = "Acc:";
+                els[0].style.paddingLeft = 0;
             }
+        }
 
-            var els = contains('td', 'Bank');
-            els[0].style.paddingLeft = 0;
-            var els = contains('td', 'Acc Name');
-            els[0].textContent = "Name:";
-            els[0].style.paddingLeft = 0;
-            var els = contains('td', 'Sort Code');
-            els[0].textContent = "Sort:";
-            els[0].style.paddingLeft = 0;
-            var els = contains('td', 'Acc No');
-            els[0].textContent = "Acc:";
-            els[0].style.paddingLeft = 0;
+        function contains(selector, text) {
+          var elements = document.querySelectorAll(selector);
+          return [].filter.call(elements, function(element){
+            return RegExp(text).test(element.textContent);
+          });   
         }
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
@@ -41,14 +50,26 @@ if (screen_width < 1000) {
         dynamic_fontsize = Math.round(parent_height/7);
 
         cells = document.getElementsByTagName("td");
-        for (var i=0; i< cells.length; i++) {
-        
-            cells[i].style.fontSize = dynamic_fontsize.toString() + "px";
-          
-            if (cells[i].innerText == "Sevenoaks Welcomes Refugees") {
-                cells[i].innerText = "Sevenoaks W. R.";
+        if (cells[0]) {
+            for (var i=0; i< cells.length; i++) {
+            
+                cells[i].style.fontSize = dynamic_fontsize.toString() + "px";
+              
+                if (cells[i].innerText == "Sevenoaks Welcomes Refugees") {
+                    cells[i].innerText = "Sevenoaks W. R.";
+                }
+            }    
+        }
+
+        dynamic_fontsize = Math.round(parent_height/7.5);
+
+        cells = document.getElementsByTagName("p");
+        if (cells[0]) {
+            for (var i=0; i< cells.length; i++) {
+            
+              cells[i].style.fontSize = dynamic_fontsize.toString() + "px";
             }
-        }    
+        }
     }
   
 
@@ -79,96 +100,91 @@ if (screen_width < 1000) {
         address_blurb.style.paddingLeft = dynamic_padding.toString() + "px";
     }
 
+    if (screen_width < 480) {
+        var head = document.getElementsByTagName('HEAD')[0];  
+  
+        // Create new link Element 
+        var link = document.createElement('link'); 
+  
+        // set the attributes for link element  
+        link.rel = 'stylesheet';  
+      
+        link.type = 'text/css'; 
+      
+        link.href = 'https://7oakswelcomesrefugees.github.io/mobile.css';  
+  
+        // Append link element to HTML head 
+        head.appendChild(link);
+    }
+
+
+
+    if (document.getElementById("family_testimonials")) {
+            image1 = document.getElementById("image1");
+            image2 = document.getElementById("image2");
+            image1.src = "https://7oakswelcomesrefugees.github.io/RefugeeSpeechBubbles_splitA.png"
+            image2.src = "https://7oakswelcomesrefugees.github.io/RefugeeSpeechBubbles_splitB.png"
+
+            image1.parentElement.style.width = "100%";
+            image1.parentElement.style.padding = 0;
+            image2.parentElement.style.width = "100%";
+            image2.parentElement.style.padding = 0;
+            image2.parentElement.style.display = "block";
+    }
+
+    lock_control = document.getElementById("lock_control");
+    if (lock_control) {
+        map_height = getMapHeight();
+        document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
+        document.getElementById("map_iframe").height = map_height;
+
         if (screen_width < 480) {
-            var head = document.getElementsByTagName('HEAD')[0];  
-      
-            // Create new link Element 
-            var link = document.createElement('link'); 
-      
-            // set the attributes for link element  
-            link.rel = 'stylesheet';  
-          
-            link.type = 'text/css'; 
-          
-            link.href = 'https://7oakswelcomesrefugees.github.io/mobile.css';  
-      
-            // Append link element to HTML head 
-            head.appendChild(link);
+            window.addEventListener("orientationchange", function() {
+                if ((window.orientation ==0) || (window.orientation == 180)) {
+                    map_height = getMapHeight();
+                    document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
+                    document.getElementById("map_iframe").height = map_height;
+                } else if ((window.orientation == -90) || (window.orientation == 90))  {
+                    map_height = getMapHeight();
+                    document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
+                    document.getElementById("map_iframe").height = map_height;
+                }
+            }, false);    
+
+            pic = lock_control.querySelectorAll("img")[0];
+            pic.src = "https://7oakswelcomesrefugees.github.io/GoogleMapsLogo.png";
+
+            sentence = lock_control.querySelectorAll("p")[0];
+            sentence.innerHTML = "Click to load Google map"
+
+            top_overlay = document.getElementById('top_overlay');
+            top_overlay.removeEventListener('click',unlockMap);
+            top_overlay.removeEventListener('click',lockMap);
+            top_overlay.addEventListener('click', loadMap);
+            
+
+
         }
+    }
 
+    
 
+    function loadMap(e) {
+        //map_url = "https://www.google.com/maps/d/u/1/viewer?mid=13-swUGe96NuWXLNk908U2j6azFBWZKZL&ll=51.28007648128535%2C0.20557084999995823&z=15";
+        //map_url = "https://maps.google.com/maps/d/u/1/view?hl=en&mid=13-swUGe96NuWXLNk908U2j6azFBWZKZL&ll=51.28007648128536%2C0.20557084999995823&z=13";
+        map_url="https://www.google.com/maps/d/viewer?mid=13-swUGe96NuWXLNk908U2j6azFBWZKZL&hl=en&usp=sharing";
+        //var aTag = document.createElement('a');
+        //aTag.setAttribute('href',map_url);
+        //  aTag.click();
+        window.open(map_url);
+            
+    }
 
-        if (document.getElementById("family_testimonials")) {
-                image1 = document.getElementById("image1");
-                image2 = document.getElementById("image2");
-                image1.src = "https://7oakswelcomesrefugees.github.io/RefugeeSpeechBubbles_splitA.png"
-                image2.src = "https://7oakswelcomesrefugees.github.io/RefugeeSpeechBubbles_splitB.png"
-
-                image1.parentElement.style.width = "100%";
-                image1.parentElement.style.padding = 0;
-                image2.parentElement.style.width = "100%";
-                image2.parentElement.style.padding = 0;
-                image2.parentElement.style.display = "block";
-        }
-
-        lock_control = document.getElementById("lock_control");
-        if (lock_control) {
-            map_height = getMapHeight();
-            document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
-            document.getElementById("map_iframe").height = map_height;
-
-            if (screen_width < 480) {
-                window.addEventListener("orientationchange", function() {
-                    if ((window.orientation ==0) || (window.orientation == 180)) {
-                        map_height = getMapHeight();
-                        document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
-                        document.getElementById("map_iframe").height = map_height;
-                    } else if ((window.orientation == -90) || (window.orientation == 90))  {
-                        map_height = getMapHeight();
-                        document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
-                        document.getElementById("map_iframe").height = map_height;
-                    }
-                }, false);    
-
-                pic = lock_control.querySelectorAll("img")[0];
-                pic.src = "https://7oakswelcomesrefugees.github.io/GoogleMapsLogo.png";
-
-                sentence = lock_control.querySelectorAll("p")[0];
-                sentence.innerHTML = "Click to load Google map"
-
-                top_overlay = document.getElementById('top_overlay');
-                top_overlay.removeEventListener('click',unlockMap);
-                top_overlay.removeEventListener('click',lockMap);
-                top_overlay.addEventListener('click', loadMap);
-                
-
-
-            }
-        }
-
-        function contains(selector, text) {
-          var elements = document.querySelectorAll(selector);
-          return [].filter.call(elements, function(element){
-            return RegExp(text).test(element.textContent);
-          });
-        }
-	
-        function loadMap(e) {
-            //map_url = "https://www.google.com/maps/d/u/1/viewer?mid=13-swUGe96NuWXLNk908U2j6azFBWZKZL&ll=51.28007648128535%2C0.20557084999995823&z=15";
-            //map_url = "https://maps.google.com/maps/d/u/1/view?hl=en&mid=13-swUGe96NuWXLNk908U2j6azFBWZKZL&ll=51.28007648128536%2C0.20557084999995823&z=13";
-            map_url="https://www.google.com/maps/d/viewer?mid=13-swUGe96NuWXLNk908U2j6azFBWZKZL&hl=en&usp=sharing";
-            //var aTag = document.createElement('a');
-            //aTag.setAttribute('href',map_url);
-            //  aTag.click();
-            window.open(map_url);
-                
-        }
-
-        function getMapHeight() {
-            parent_frame = parent.document.getElementsByTagName('iframe')[0];
-            parent_height = parent_frame.contentWindow.innerHeight;
-            map_height = Math.round(parent_height*0.7);
-            return map_height;
-        }
+    function getMapHeight() {
+        parent_frame = parent.document.getElementsByTagName('iframe')[0];
+        parent_height = parent_frame.contentWindow.innerHeight;
+        map_height = Math.round(parent_height*0.7);
+        return map_height;
+    }
 
 }
