@@ -56,7 +56,6 @@ if (screen_width < 1000) {
             document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
             document.getElementById("map_iframe").height = map_height;
 
-        var screen_width = screen.width;
             if (screen_width < 480) {
                 window.addEventListener("orientationchange", function() {
                     if ((window.orientation ==0) || (window.orientation == 180)) {
