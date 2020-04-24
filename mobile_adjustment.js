@@ -29,7 +29,7 @@ if (screen_width < 1000) {
         dynamic_fontsize = Math.round(parent_height/8);
         address_blurb.style.fontSize = dynamic_fontsize.toString() + "px";
 
-        dynamic_padding = Math.round(parent_width*0.12);
+        dynamic_padding = Math.round(parent_width*0.11);
         address_blurb.style.paddingLeft = dynamic_padding.toString() + "px";
     }
 
