@@ -141,9 +141,9 @@ if (screen_width < 1000) {
         window.addEventListener("orientationchange", function() {
             console.log("rotated");
                 if ((window.orientation ==0) || (window.orientation == 180)) {
-                    setTimeout(adjustForRotation, 40); //timeout may be unecessary, artefact introduced by emulator service?
+                    setTimeout(adjustForRotation, 1000); //timeout may be unecessary, artefact introduced by emulator service?
                 } else if ((window.orientation == -90) || (window.orientation == 90))  {
-                    setTimeout(adjustForRotation, 40); 
+                    setTimeout(adjustForRotation, 1000); 
                 }
             }, false);    
 
