@@ -21,11 +21,12 @@ if (document.getElementsByClassName("donate")[0]) {
     cells = document.getElementsByTagName("td");
     if (cells[0]) {
         active_embed = "bank_table";
-        divisor_bank_table = 6.7;
         adjustBankTable();
     }
 
     function adjustBankTable() {
+        divisor_bank_table = 6.7;
+        
         parent_height = parent.innerHeight;
         dynamic_fontsize = Math.round(parent_height/divisor_bank_table);
         new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
@@ -44,11 +45,12 @@ if (document.getElementsByClassName("donate")[0]) {
     cells = document.getElementsByTagName("p");
     if (cells[0]) {
         active_embed = "cheque_address";
-        divisor_cheque_address = 7.5;
         adjustChequeAddress();
     }
 
     function adjustChequeAddress() {
+        divisor_cheque_address = 7.5;
+
         parent_height=parent.innerHeight;
         dynamic_fontsize = Math.round(parent_height/divisor_cheque_address);
         new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
@@ -83,7 +85,6 @@ if (screen_width < 1050) {
 
     if (document.getElementsByClassName("aboutus")[0]) {
         active_embed = "trustee_id";
-        divisor_trustee_id = 2.6;
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
@@ -91,6 +92,8 @@ if (screen_width < 1050) {
         adjustTrusteeId();
 
         function adjustTrusteeId() {
+            divisor_trustee_id = 2.6;
+
             parent_height = parent.innerHeight; //parent_frame.contentWindow.innerHeight;
             dynamic_fontsize = Math.round(parent_height/divisor_trustee_id);
 
@@ -103,10 +106,11 @@ if (screen_width < 1050) {
 
     if (document.getElementsByClassName("contactus")[0]) {
         active_embed = "address_blurb";
-        divisors_address_blurb = [8.5,10];
         adjustAddressBlurb();
 
         function adjustAddressBlurb() {
+            divisors_address_blurb = [8.5,10];
+
             parent_frame = parent.document.getElementsByTagName('iframe')[0];
             parent_frame.scrolling="no";
             parent_height = parent.document.body.clientHeight;
@@ -150,12 +154,6 @@ if (screen_width < 1050) {
     if (lock_control) {
         active_embed = "google_map";
 
-        if (screen_width < 480) {
-            scale_map = 0.75;
-        } else {
-            scale_map = 0.64;
-        }
-
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
         document.getElementById("map_iframe").scrolling="no";
@@ -179,8 +177,9 @@ if (screen_width < 1050) {
     }
 
     function getMapHeight() {
+        scale_map = 0.7; //0.64
         parent_height = parent.document.body.clientHeight;
-        map_height = Math.round(parent_height*0.64);
+        map_height = Math.round(parent_height*scale_map);
         return map_height;
     }
 
