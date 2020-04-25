@@ -7,9 +7,9 @@ Script include tag:
 
 var active_embed;
 var screen_width = screen.width;
-if (true) {
-    var screen_width = 500;
-}
+// if (true) {
+//     var screen_width = 500;
+// }
 
 if (document.getElementsByClassName("donate")[0]) {
     if (screen_width < 480) {
@@ -191,9 +191,6 @@ if (active_embed == "family_testimonials") { updateFunction = adjustFamilyTestim
 if (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
 
 var adjust_delay = 150;
-if (active_embed==google_map) {
-    adjust_delay = 300;
-}
 
 if (active_embed) {
     window.addEventListener("orientationchange", function() {
