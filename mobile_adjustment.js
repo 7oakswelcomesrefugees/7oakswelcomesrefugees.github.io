@@ -99,7 +99,7 @@ if (screen_width < 1050) {
                 max_fontsize = 26;
             }
 
-            divisor_trustee_id = 2.7;
+            divisor_trustee_id = 2.8;
 
             parent_height = parent.innerHeight; //parent_frame.contentWindow.innerHeight;
             dynamic_fontsize = Math.round(parent_height/divisor_trustee_id);
