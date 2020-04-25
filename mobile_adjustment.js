@@ -240,7 +240,7 @@ if (screen_width < 1000) {
     }
 
     function getMapHeight() {
-        parent_height = parent.innerHeight;
+        parent_height = parent.document.body.clientHeight;
         map_height = Math.round(parent_height*0.64);
         return map_height;
     }
