@@ -263,9 +263,4 @@ if (active_embed) {
         // }   //updateFunction();
     }, false);    
     
-active_embed == "cheque_address";
-active_embed == "trustee_id";
-active_embed == "address_blurb";
-active_embed == "family_testimonials";
-active_embed == "google_map";
 }
