@@ -252,11 +252,11 @@ if (screen_width < 1050) {
         map_url="https://www.google.com/maps/d/viewer?mid=13-swUGe96NuWXLNk908U2j6azFBWZKZL";
         map_url="https://drive.google.com/open?id=13-swUGe96NuWXLNk908U2j6azFBWZKZL&usp=sharing";
         
-        //var aTag = document.createElement('a');
-        //aTag.setAttribute('href',map_url);
-        //  aTag.click();
-        window.open(map_url);
-       window.open(map_url);
+        var aTag = document.createElement('a');
+        aTag.setAttribute('href',map_url);
+        aTag.click();
+        //window.open(map_url);
+       //window.open(map_url);
             
     }
 
