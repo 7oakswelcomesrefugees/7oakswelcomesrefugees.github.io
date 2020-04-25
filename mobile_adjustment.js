@@ -99,7 +99,7 @@ if (screen_width < 1050) {
                 max_fontsize = 26;
             }
 
-            divisor_trustee_id = 2.6;
+            divisor_trustee_id = 2.7;
 
             parent_height = parent.innerHeight; //parent_frame.contentWindow.innerHeight;
             dynamic_fontsize = Math.round(parent_height/divisor_trustee_id);
@@ -165,7 +165,7 @@ if (screen_width < 1050) {
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
         document.getElementById("map_iframe").scrolling="no";
-        
+
         body = document.getElementsByTagName("body")[0];
         body.style.marginTop ="4px";
 
