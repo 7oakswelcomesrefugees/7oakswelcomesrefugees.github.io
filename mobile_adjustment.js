@@ -156,6 +156,8 @@ if (screen_width < 1050) {
             scale_map = 0.64;
         }
 
+        parent_frame = parent.document.getElementsByTagName('iframe')[0];
+        parent_frame.scrolling="no";
         document.getElementById("map_iframe").scrolling="no";
         adjustGoogleMap();
         
