@@ -256,7 +256,7 @@ if (screen_width < 1050) {
         //aTag.setAttribute('href',map_url);
         //  aTag.click();
         window.open(map_url);
-       //window.open(map_url);
+       window.open(map_url);
             
     }
 
