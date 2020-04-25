@@ -5,7 +5,8 @@ Script include tag:
 <script type="text/javascript" src="https://7oakswelcomesrefugees.github.io/mobile_adjustment.js"></script>
  */
 var active_embed;
-max_fontsize = 22;
+
+
 
 if (document.getElementsByClassName("donate")[0]) {
 
@@ -97,6 +98,12 @@ if (document.getElementsByClassName("donate")[0]) {
 }
 
 var screen_width = screen.width;
+if (screen_width < 480) {
+    max_fontsize = 20;
+} else {
+    max_fontsize = 25;
+}
+
 if (screen_width < 1000) {
   
 
