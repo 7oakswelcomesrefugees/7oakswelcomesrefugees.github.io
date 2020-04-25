@@ -10,13 +10,14 @@ var screen_width = screen.width;
 // if (true) {
 //     var screen_width = 500;
 // }
-if (screen_width < 480) {
+
+
+if (document.getElementsByClassName("donate")[0]) {
+    if (screen_width < 480) {
         max_fontsize = 20;
     } else {
         max_fontsize = 22;
     }
-
-if (document.getElementsByClassName("donate")[0]) {
 
     cells = document.getElementsByTagName("td");
     if (cells[0]) {
@@ -93,6 +94,7 @@ if (screen_width < 1050) {
 
         function adjustTrusteeId() {
             divisor_trustee_id = 2.6;
+            max_fontsize = 24;
 
             parent_height = parent.innerHeight; //parent_frame.contentWindow.innerHeight;
             dynamic_fontsize = Math.round(parent_height/divisor_trustee_id);
