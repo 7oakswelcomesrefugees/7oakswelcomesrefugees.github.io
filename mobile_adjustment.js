@@ -93,6 +93,7 @@ if (screen_width < 1050) {
         adjustTrusteeId();
 
         function adjustTrusteeId() {
+            console.log(parent_frame);
             if (screen_width < 480) {
                 max_fontsize = 23;
             } else {
