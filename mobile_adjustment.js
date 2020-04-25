@@ -190,6 +190,9 @@ if (active_embed == "family_testimonials") { updateFunction = adjustFamilyTestim
 if (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
 
 var adjust_delay = 150;
+if (active_embed == "google_map") {
+    adjust_delay = 300;
+}
 
 if (active_embed) {
     window.addEventListener("orientationchange", function() {
