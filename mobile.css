@@ -30,15 +30,15 @@ a.aboutus {
   --map-window-height: 75%;
 }*/
 
-#map_iframe {
+/*#map_iframe {
 	height: var(--map-window-height);
 }
 
 .overlay {
 
-   height: var(--map-window-height); /* your iframe height */
-   top: var(--map-window-height);  /* your iframe height */
-   margin-top: calc(var(--map-window-height)*-1);  /* your iframe height */
+   height: var(--map-window-height); 
+   top: var(--map-window-height); 
+   margin-top: calc(var(--map-window-height)*-1);  
 }
 
 #lock_control {
@@ -51,4 +51,4 @@ a.aboutus {
 		z-index: 97; 
 		background-color: white; 
 		opacity: 0.7;
-	}
+	}*/
