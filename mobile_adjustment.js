@@ -167,7 +167,7 @@ if (screen_width < 1050) {
         document.getElementById("map_iframe").scrolling="no";
 
         body = document.getElementsByTagName("body")[0];
-        body.style.marginTop ="4px";
+        body.style.marginTop ="7px";
 
         adjustGoogleMap();
         
