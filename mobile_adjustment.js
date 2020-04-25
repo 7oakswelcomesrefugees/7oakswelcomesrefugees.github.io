@@ -7,7 +7,7 @@ Script include tag:
 var active_embed;
 // var screen_width = screen.width;
 if (true) {
-    var screen_width = parent.parent.visualViewport.height;
+    var screen_width = parent.parent.visualViewport.width;
 }
 
 if (screen_width < 480) {
