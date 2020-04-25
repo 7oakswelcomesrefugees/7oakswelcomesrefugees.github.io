@@ -192,7 +192,11 @@ if (screen_width < 1050) {
             while (overlays[0]) {
                 overlays[0].remove()
             }
+<<<<<<< HEAD
         
+=======
+            
+>>>>>>> parent of 4e116a1... Update mobile_adjustment.js
         }
     }
 
