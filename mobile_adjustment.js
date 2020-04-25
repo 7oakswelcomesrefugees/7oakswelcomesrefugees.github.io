@@ -94,9 +94,9 @@ if (screen_width < 1050) {
 
         function adjustTrusteeId() {
             if (screen_width < 480) {
-                max_fontsize = 22;
+                max_fontsize = 23;
             } else {
-                max_fontsize = 24;
+                max_fontsize = 26;
             }
 
             divisor_trustee_id = 2.6;
