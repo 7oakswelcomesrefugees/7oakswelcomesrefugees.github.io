@@ -93,8 +93,6 @@ if (screen_width < 1050) {
         adjustTrusteeId();
 
         function adjustTrusteeId() {
-            console.log(parent_frame);
-
             if (screen_width < 480) {
                 max_fontsize = 23;
             } else {
@@ -109,7 +107,7 @@ if (screen_width < 1050) {
 
             trustee_id = document.getElementsByTagName("a")[0];
             trustee_id.style.fontSize = new_fontsize.toString() + "px";
-            trustee_id.parentElement.style.marginTop = "0px";
+            trustee_id.parentElement.style.marginTop = "-2px";
         }
         
     }
