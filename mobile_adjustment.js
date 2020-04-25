@@ -102,14 +102,16 @@ if (screen_width < 1000) {
 
 
     if (document.getElementsByClassName("aboutus")[0]) {
+        parent_frame = parent.document.getElementsByTagName('iframe')[0];
+        parent_frame.scrolling="no";
+        console.log(parent_frame);
+
         active_embed = "trustee_id";
         adjustTrusteeId();
 
         function adjustTrusteeId() {
             console.log(active_embed);
 
-            parent_frame = parent.document.getElementsByTagName('iframe')[0];
-            parent_frame.scrolling="no";
             parent_height = parent.innerHeight; //parent_frame.contentWindow.innerHeight;
             dynamic_fontsize = Math.round(parent_height/2.6);
 
