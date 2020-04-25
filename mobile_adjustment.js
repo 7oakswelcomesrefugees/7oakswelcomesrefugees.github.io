@@ -106,8 +106,8 @@ if (screen_width < 1050) {
             new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
 
             trustee_id = document.getElementsByTagName("a")[0];
-            trustee_id.style.fontSize = new_fontsize.toString() + "px";
-            trustee_id.parentElement.style.marginTop = "-2px";
+            // trustee_id.style.fontSize = new_fontsize.toString() + "px";
+            // trustee_id.parentElement.style.marginTop = "-2px";
         }
         
     }
