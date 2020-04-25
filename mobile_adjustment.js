@@ -247,7 +247,7 @@ if (screen_width < 1000) {
     function getMapHeight() {
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_height = parent_frame.contentWindow.innerHeight;
-        map_height = Math.round(parent_height*0.7);
+        map_height = Math.round(parent_height*0.6);
         return map_height;
     }
 
