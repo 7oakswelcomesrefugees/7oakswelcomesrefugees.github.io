@@ -54,8 +54,8 @@ if (document.getElementsByClassName("donate")[0]) {
     function adjustBankTable() {
         console.log("bank table");
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
-        parent_height = parent_frame.contentWindow.innerHeight;
-        dynamic_fontsize = Math.round(parent_height/6.7);
+        parent_height = parent_frame.contentWindow.innerWidth;
+        dynamic_fontsize = Math.round(parent_height/13);
         new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
 
         cells = document.getElementsByTagName("td");
@@ -81,7 +81,7 @@ if (document.getElementsByClassName("donate")[0]) {
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_height = parent_frame.contentWindow.innerHeight;
-        dynamic_fontsize = Math.round(parent_height/7.5);
+        dynamic_fontsize = Math.round(parent_height/15);
         new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
 
         cells = document.getElementsByTagName("p");     
