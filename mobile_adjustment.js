@@ -5,10 +5,11 @@ Script include tag:
 <script type="text/javascript" src="https://7oakswelcomesrefugees.github.io/mobile_adjustment.js"></script>
  */
 var active_embed;
-// var screen_width = screen.width;
-if (true) {
-    var screen_width = 500;
-}
+var screen_width = screen.width;
+var adjust_delay = 200;
+// if (true) {
+//     var screen_width = 500;
+// }
 
 if (screen_width < 480) {
     max_fontsize = 20;
@@ -109,7 +110,7 @@ if (document.getElementsByClassName("donate")[0]) {
 
 
 
-if (screen_width < 1000) {
+if (screen_width < 1050) {
   
 
 
@@ -204,7 +205,7 @@ if (screen_width < 1000) {
 
         window.addEventListener("orientationchange", function() {
             console.log("rotated");
-            setTimeout(adjustGoogleMap, 500); 
+            setTimeout(adjustGoogleMap,  adjust_delay); 
             }, false);    
 
         if (screen_width < 480) {
@@ -276,7 +277,7 @@ if (active_embed) {
         console.log("rotated");
         console.log(window);
         //updateFunction();
-        setTimeout(updateFunction, 500); 
+        setTimeout(updateFunction, adjust_delay); 
         // if ((window.orientation ==0) || (window.orientation == 180)) {
         //     console.log("rotated");
         //     console.log(window);
