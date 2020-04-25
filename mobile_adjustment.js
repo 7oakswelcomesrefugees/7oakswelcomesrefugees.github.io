@@ -188,11 +188,11 @@ if (screen_width < 1000) {
         window.addEventListener("orientationchange", function() {
             console.log("rotated");
                 if ((window.orientation ==0) || (window.orientation == 180)) {
-                    //setTimeout(adjustGoogleMap, 1000); //timeout may be unecessary, artefact introduced by emulator service?
-                    adjustGoogleMap();
+                    setTimeout(adjustGoogleMap, 500); //timeout may be unecessary, artefact introduced by emulator service?
+                    //adjustGoogleMap();
                 } else if ((window.orientation == -90) || (window.orientation == 90))  {
-                    // setTimeout(adjustGoogleMap, 1000); 
-                }   adjustGoogleMap();
+                    setTimeout(adjustGoogleMap, 500); 
+                }   //adjustGoogleMap();
             }, false);    
 
         if (screen_width < 480) {
