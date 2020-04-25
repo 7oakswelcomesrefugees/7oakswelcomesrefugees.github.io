@@ -160,7 +160,6 @@ if (screen_width < 1050) {
         adjustGoogleMap();
 
         window.addEventListener("orientationchange", function() {
-<<<<<<< HEAD
             setTimeout(adjustGoogleMap, adjust_delay); 
         }, false);   
         
@@ -168,7 +167,6 @@ if (screen_width < 1050) {
 
         while (overlays[0]) {
             overlays[0].remove();
-=======
             console.log("rotated");
             setTimeout(adjustGoogleMap,  adjust_delay); 
             }, false);    
@@ -194,8 +192,7 @@ if (screen_width < 1050) {
             while (overlays[0]) {
                 overlays[0].remove()
             }
-            
->>>>>>> parent of 4e116a1... Update mobile_adjustment.js
+        
         }
     }
 
