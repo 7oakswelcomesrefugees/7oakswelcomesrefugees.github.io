@@ -144,10 +144,10 @@ if (screen_width < 1000) {
 
             address_blurb = document.getElementById("addressblurb");
             
-            dynamic_fontsize = Math.round(parent_height/8);
+            dynamic_fontsize = Math.round(parent_height/8.5);
             address_blurb.style.fontSize = dynamic_fontsize.toString() + "px";
 
-            dynamic_padding = Math.round(parent_width*0.11);
+            dynamic_padding = Math.round(parent_width*0.1);
             address_blurb.style.paddingLeft = dynamic_padding.toString() + "px";
         }
 
