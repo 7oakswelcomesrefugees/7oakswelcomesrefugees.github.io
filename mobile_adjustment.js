@@ -26,7 +26,7 @@ if (document.getElementsByClassName("donate")[0]) {
 
     function adjustBankTable() {
         divisor_bank_table = 6.7;
-        
+
         parent_height = parent.innerHeight;
         dynamic_fontsize = Math.round(parent_height/divisor_bank_table);
         new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
@@ -191,7 +191,7 @@ if (active_embed == "cheque_address") { updateFunction = adjustChequeAddress; }
 if (active_embed == "trustee_id") { updateFunction = adjustTrusteeId; }
 if (active_embed == "address_blurb") { updateFunction = adjustAddressBlurb; }
 if (active_embed == "family_testimonials") { updateFunction = adjustFamilyTestimonials; }
-//if (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
+if (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
 
 var adjust_delay = 150;
 
