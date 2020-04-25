@@ -198,6 +198,12 @@ if (screen_width < 1050) {
 
     lock_control = document.getElementById("lock_control");
     if (lock_control) {
+        if (screen_width < 480) {
+            scale_map = 0.75;
+        } else {
+            scale_map = 0.64;
+        }
+
         active_embed = "google_map";
 
         document.getElementById("map_iframe").scrolling="no";
@@ -261,7 +267,7 @@ if (screen_width < 1050) {
 
     function getMapHeight() {
         parent_height = parent.document.body.clientHeight;
-        map_height = Math.round(parent_height*0.64);
+        map_height = Math.round(parent_height*scale_map);
         return map_height;
     }
 
