@@ -257,8 +257,8 @@ if (active_embed) {
     window.addEventListener("orientationchange", function() {
         console.log("rotated");
         console.log(window);
-        updateFunction();
-        //setTimeout(updateFunction, 1000); 
+        //updateFunction();
+        setTimeout(updateFunction, 500); 
         // if ((window.orientation ==0) || (window.orientation == 180)) {
         //     console.log("rotated");
         //     console.log(window);
