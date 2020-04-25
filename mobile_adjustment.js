@@ -94,7 +94,7 @@ if (screen_width < 1050) {
 
         function adjustTrusteeId() {
             if (screen_width < 480) {
-                max_fontsize = 20;
+                max_fontsize = 22;
             } else {
                 max_fontsize = 24;
             }
