@@ -167,7 +167,7 @@ if (screen_width < 1050) {
             overlays = document.getElementsByClassName("overlay");
 
             while (overlays[0]) {
-                overlays[0].remove()
+                overlays[0].remove();
             }
     }
 
