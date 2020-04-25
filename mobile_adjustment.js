@@ -6,7 +6,7 @@ Script include tag:
  */
 var active_embed;
 var screen_width = screen.width;
-var adjust_delay = 200;
+var adjust_delay = 150;
 // if (true) {
 //     var screen_width = 500;
 // }
