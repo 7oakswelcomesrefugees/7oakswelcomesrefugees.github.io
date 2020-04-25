@@ -218,13 +218,19 @@ if (screen_width < 1000) {
 
         } else {
             overlays = document.getElementsByClassName("overlay");
+
             for (var i = 0; i < overlays.length; i++) {
                 overlay = overlays[i];
-                while (overlay.firstChild) {
-                    overlay.removeChild(overlay.lastChild);
-                  }
                 overlay.remove();
             }
+
+            lock_div = document.getElementById("lock_control");
+            els = lock_div.querySelectorAll("*");
+            for (var i = 0; i < els.length; i++) {
+                el = els[i];
+                el.remove();
+            }
+                lock_div.remove();
         }
     }
 
