@@ -26,7 +26,6 @@ if (document.getElementsByClassName("donate")[0]) {
     }
 
     function adjustBankTable() {
-        console.log("bank table");
         parent_height = parent.innerHeight;
         dynamic_fontsize = Math.round(parent_height/divisor_bank_table);
         new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
@@ -50,7 +49,6 @@ if (document.getElementsByClassName("donate")[0]) {
     }
 
     function adjustChequeAddress() {
-
         parent_height=parent.innerHeight;
         dynamic_fontsize = Math.round(parent_height/divisor_cheque_address);
         new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
@@ -169,7 +167,6 @@ if (screen_width < 1050) {
     }
 
     function adjustGoogleMap() {
-        console.log("rotated");
         map_height = getMapHeight();
         document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
         document.getElementById("map_iframe").height = map_height;
@@ -190,24 +187,12 @@ if (active_embed == "trustee_id") { updateFunction = adjustTrusteeId; }
 if (active_embed == "address_blurb") { updateFunction = adjustAddressBlurb; }
 if (active_embed == "family_testimonials") { updateFunction = adjustFamilyTestimonials; }
 if (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
-console.log(updateFunction);
 
 var adjust_delay = 150;
 
 if (active_embed) {
     window.addEventListener("orientationchange", function() {
-        console.log("rotated");
-        console.log(window);
-        //updateFunction();
         setTimeout(updateFunction, adjust_delay); 
-        // if ((window.orientation ==0) || (window.orientation == 180)) {
-        //     console.log("rotated");
-        //     console.log(window);
-        //     setTimeout(updateFunction, 1000); //timeout may be unecessary, artifact introduced by smaller screen emulator service?
-        //     //updateFunction();
-        // } else if ((window.orientation == -90) || (window.orientation == 90))  {
-            
-        // }   //updateFunction();
     }, false);    
     
 }
