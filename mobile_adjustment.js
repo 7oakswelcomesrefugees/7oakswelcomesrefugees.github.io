@@ -4,25 +4,24 @@
 Script include tag:
 <script type="text/javascript" src="https://7oakswelcomesrefugees.github.io/mobile_adjustment.js"></script>
  */
+
 var active_embed;
 var screen_width = screen.width;
-var adjust_delay = 150;
 // if (true) {
 //     var screen_width = 500;
 // }
 
-if (screen_width < 480) {
-    max_fontsize = 20;
-} else {
-    max_fontsize = 22;
-}
-
 if (document.getElementsByClassName("donate")[0]) {
+    if (screen_width < 480) {
+        max_fontsize = 20;
+    } else {
+        max_fontsize = 22;
+    }
 
     cells = document.getElementsByTagName("td");
     if (cells[0]) {
-        divisor_bank_table = 6.7;
         active_embed = "bank_table";
+        divisor_bank_table = 6.7;
         adjustBankTable();
     }
 
@@ -35,7 +34,6 @@ if (document.getElementsByClassName("donate")[0]) {
         cells = document.getElementsByTagName("td");
        
         for (var i=0; i< cells.length; i++) {
-            
             cells[i].style.fontSize = new_fontsize.toString() + "px";
           
             if (cells[i].innerText == "Sevenoaks Welcomes Refugees") {
@@ -46,13 +44,12 @@ if (document.getElementsByClassName("donate")[0]) {
 
     cells = document.getElementsByTagName("p");
     if (cells[0]) {
-        divisor_cheque_address = 7.5;
         active_embed = "cheque_address";
+        divisor_cheque_address = 7.5;
         adjustChequeAddress();
-        
     }
+
     function adjustChequeAddress() {
-        console.log("cheque address");
 
         parent_height=parent.innerHeight;
         dynamic_fontsize = Math.round(parent_height/divisor_cheque_address);
@@ -60,7 +57,6 @@ if (document.getElementsByClassName("donate")[0]) {
 
         cells = document.getElementsByTagName("p");     
         for (var i=0; i< cells.length; i++) {
-        
           cells[i].style.fontSize = new_fontsize.toString() + "px";
         }
     }
@@ -88,18 +84,15 @@ if (screen_width < 1050) {
 
 
     if (document.getElementsByClassName("aboutus")[0]) {
+        active_embed = "trustee_id";
         divisor_trustee_id = 2.6;
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
-        console.log(parent_frame);
-
-        active_embed = "trustee_id";
+        
         adjustTrusteeId();
 
         function adjustTrusteeId() {
-            console.log(active_embed);
-
             parent_height = parent.innerHeight; //parent_frame.contentWindow.innerHeight;
             dynamic_fontsize = Math.round(parent_height/divisor_trustee_id);
 
@@ -111,8 +104,8 @@ if (screen_width < 1050) {
     }
 
     if (document.getElementsByClassName("contactus")[0]) {
-        divisors_address_blurb = [8.5,10];
         active_embed = "address_blurb";
+        divisors_address_blurb = [8.5,10];
         adjustAddressBlurb();
 
         function adjustAddressBlurb() {
@@ -122,7 +115,7 @@ if (screen_width < 1050) {
             parent_width = parent.document.body.clientWidth;
 
             address_blurb = document.getElementById("addressblurb");
-            
+
             dynamic_fontsize = Math.round(parent_height/divisors_address_blurb[0]);
             address_blurb.style.fontSize = dynamic_fontsize.toString() + "px";
 
@@ -157,27 +150,21 @@ if (screen_width < 1050) {
 
     lock_control = document.getElementById("lock_control");
     if (lock_control) {
+        active_embed = "google_map";
+
         if (screen_width < 480) {
             scale_map = 0.75;
         } else {
             scale_map = 0.64;
         }
 
-        active_embed = "google_map";
-
         document.getElementById("map_iframe").scrolling="no";
         adjustGoogleMap();
-
-        window.addEventListener("orientationchange", function() {
-            console.log("rotated");
-            setTimeout(adjustGoogleMap,  adjust_delay); 
-            }, false);    
-
         
-            overlays = document.getElementsByClassName("overlay");
+        overlays = document.getElementsByClassName("overlay");
 
-            while (overlays[0]) {
-                overlays[0].remove();
+        while (overlays[0]) {
+            overlays[0].remove();
         }
     }
 
@@ -204,6 +191,8 @@ if (active_embed == "address_blurb") { updateFunction = adjustAddressBlurb; }
 if (active_embed == "family_testimonials") { updateFunction = adjustFamilyTestimonials; }
 if (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
 console.log(updateFunction);
+
+var adjust_delay = 150;
 
 if (active_embed) {
     window.addEventListener("orientationchange", function() {
