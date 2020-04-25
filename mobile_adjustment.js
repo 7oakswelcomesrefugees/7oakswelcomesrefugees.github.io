@@ -216,6 +216,15 @@ if (screen_width < 1000) {
             
 
 
+        } else {
+            overlays = document.getElementsByClassName("overlay");
+            for (var i = 0; i < overlays.length; i++) {
+                overlay = overlays[i];
+                while (overlay.firstChild) {
+                    overlay.removeChild(overlay.lastChild);
+                  }
+                overlay.remove();
+            }
         }
     }
 
