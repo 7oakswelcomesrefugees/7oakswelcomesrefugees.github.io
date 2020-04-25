@@ -158,10 +158,6 @@ if (screen_width < 1050) {
         parent_frame.scrolling="no";
         document.getElementById("map_iframe").scrolling="no";
         adjustGoogleMap();
-
-        window.addEventListener("orientationchange", function() {
-            setTimeout(adjustGoogleMap, adjust_delay); 
-        }, false);   
         
         overlays = document.getElementsByClassName("overlay");
 
