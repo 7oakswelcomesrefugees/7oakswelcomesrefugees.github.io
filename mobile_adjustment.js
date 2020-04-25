@@ -54,8 +54,8 @@ if (document.getElementsByClassName("donate")[0]) {
     function adjustBankTable() {
         console.log("bank table");
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
-        parent_height = parent_frame.contentWindow.innerWidth;
-        dynamic_fontsize = Math.round(parent_height/13);
+        parent_width = parent_frame.contentWindow.innerWidth;
+        dynamic_fontsize = Math.round(parent_width/15);
         new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
 
         cells = document.getElementsByTagName("td");
@@ -80,8 +80,8 @@ if (document.getElementsByClassName("donate")[0]) {
         console.log("cheque address");
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
-        parent_height = parent_frame.contentWindow.innerHeight;
-        dynamic_fontsize = Math.round(parent_height/15);
+        parent_width = parent_frame.contentWindow.innerWidth;
+        dynamic_fontsize = Math.round(parent_width/16);
         new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
 
         cells = document.getElementsByTagName("p");     
