@@ -208,28 +208,27 @@ if (screen_width < 1050) {
             setTimeout(adjustGoogleMap,  adjust_delay); 
             }, false);    
 
-        if (screen_width < 480) {
+        // if (screen_width < 480) {
 
-            pic = lock_control.querySelectorAll("img")[0];
-            pic.src = "https://7oakswelcomesrefugees.github.io/GoogleMapsLogo.png";
+        //     pic = lock_control.querySelectorAll("img")[0];
+        //     pic.src = "https://7oakswelcomesrefugees.github.io/GoogleMapsLogo.png";
 
-            sentence = lock_control.querySelectorAll("p")[0];
-            sentence.innerHTML = "Click to load Google map"
+        //     sentence = lock_control.querySelectorAll("p")[0];
+        //     sentence.innerHTML = "Click to load Google map"
 
-            top_overlay = document.getElementById('top_overlay');
-            top_overlay.removeEventListener('click',unlockMap);
-            top_overlay.removeEventListener('click',lockMap);
-            top_overlay.addEventListener('click', loadMap);
+        //     top_overlay = document.getElementById('top_overlay');
+        //     top_overlay.removeEventListener('click',unlockMap);
+        //     top_overlay.removeEventListener('click',lockMap);
+        //     top_overlay.addEventListener('click', loadMap);
             
 
 
-        } else {
+        // } else {
             overlays = document.getElementsByClassName("overlay");
 
             while (overlays[0]) {
                 overlays[0].remove()
-            }
-            
+            // }
         }
     }
 
