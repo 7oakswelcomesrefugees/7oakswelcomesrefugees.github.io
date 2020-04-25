@@ -7,9 +7,9 @@ Script include tag:
 
 var active_embed;
 var screen_width = screen.width;
-// if (true) {
-//     var screen_width = 500;
-// }
+if (true) {
+    var screen_width = 500;
+}
 
 if (document.getElementsByClassName("donate")[0]) {
     if (screen_width < 480) {
