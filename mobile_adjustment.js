@@ -102,6 +102,8 @@ if (screen_width < 1000) {
         adjustTrusteeId();
 
         function adjustTrusteeId() {
+            console.log(active_embed);
+
             parent_frame = parent.document.getElementsByTagName('iframe')[0];
             parent_frame.scrolling="no";
             parent_height = parent_frame.contentWindow.innerHeight;
