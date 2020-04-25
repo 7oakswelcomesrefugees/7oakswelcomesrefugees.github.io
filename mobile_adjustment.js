@@ -43,16 +43,13 @@ if (document.getElementsByClassName("donate")[0]) {
     }
 
     cells = document.getElementsByTagName("p");
-    console.log("hello")
     if (cells[0]) {
-        console.log("hello")
         active_embed = "cheque_address";
         adjustChequeAddress();
     }
 
     function adjustChequeAddress() {
-        console.log("hello")
-        divisor_cheque_address = 5;
+        divisor_cheque_address = 7.5;
 
         parent_height=parent.innerHeight;
         dynamic_fontsize = Math.round(parent_height/divisor_cheque_address);
