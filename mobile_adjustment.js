@@ -250,6 +250,8 @@ if (screen_width < 1050) {
         map_url="https://www.google.com/maps/d/viewer?mid=13-swUGe96NuWXLNk908U2j6azFBWZKZL&hl=en&usp=sharing";
         map_url="https://drive.google.com/open?id=13-swUGe96NuWXLNk908U2j6azFBWZKZL&usp=sharing";
         map_url = "https://www.google.com/maps/d/u/2/viewer?ll=51.28007266672079%2C0.20557063849389579&z=15&mid=13-swUGe96NuWXLNk908U2j6azFBWZKZL"
+        map_url="https://www.google.com/maps/d/viewer?mid=13-swUGe96NuWXLNk908U2j6azFBWZKZL"
+        
         //var aTag = document.createElement('a');
         //aTag.setAttribute('href',map_url);
         //  aTag.click();
