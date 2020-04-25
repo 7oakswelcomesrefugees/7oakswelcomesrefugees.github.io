@@ -17,12 +17,11 @@ if (screen_width < 480) {
     max_fontsize = 25;
 }
 
-
-
 if (document.getElementsByClassName("donate")[0]) {
 
     cells = document.getElementsByTagName("td");
     if (cells[0]) {
+        divisor_bank_table = 6.7;
         active_embed = "bank_table";
         adjustBankTable();
     }
@@ -30,7 +29,7 @@ if (document.getElementsByClassName("donate")[0]) {
     function adjustBankTable() {
         console.log("bank table");
         parent_height = parent.innerHeight;
-        dynamic_fontsize = Math.round(parent_height/6.7);
+        dynamic_fontsize = Math.round(parent_height/divisor_bank_table);
         new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
 
         cells = document.getElementsByTagName("td");
@@ -47,6 +46,7 @@ if (document.getElementsByClassName("donate")[0]) {
 
     cells = document.getElementsByTagName("p");
     if (cells[0]) {
+        divisor_cheque_address = 7.5;
         active_embed = "cheque_address";
         adjustChequeAddress();
         
@@ -55,7 +55,7 @@ if (document.getElementsByClassName("donate")[0]) {
         console.log("cheque address");
 
         parent_height=parent.innerHeight;
-        dynamic_fontsize = Math.round(parent_height/7.5);
+        dynamic_fontsize = Math.round(parent_height/divisor_cheque_address);
         new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
 
         cells = document.getElementsByTagName("p");     
