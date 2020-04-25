@@ -229,7 +229,7 @@ if (screen_width < 1000) {
     }
 
     function adjustGoogleMap() {
-       // console.log("rotated");
+        console.log("rotated");
         map_height = getMapHeight();
         //console.log(map_height);
         //console.log(document.documentElement);
