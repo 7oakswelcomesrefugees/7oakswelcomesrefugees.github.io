@@ -5,7 +5,11 @@ Script include tag:
 <script type="text/javascript" src="https://7oakswelcomesrefugees.github.io/mobile_adjustment.js"></script>
  */
 var active_embed;
-var screen_width = screen.width;
+// var screen_width = screen.width;
+if (true) {
+    var screen_width = parent.parent.visualViewport.height;
+}
+
 if (screen_width < 480) {
     max_fontsize = 20;
 } else {
