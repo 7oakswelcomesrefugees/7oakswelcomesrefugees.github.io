@@ -137,8 +137,10 @@ if (screen_width < 1000) {
         function adjustAddressBlurb() {
             parent_frame = parent.document.getElementsByTagName('iframe')[0];
             parent_frame.scrolling="no";
-            parent_height = parent.innerHeight;
-            parent_width = parent.innerWidth;
+            parent_height = parent.document.body.clientHeight;
+            parent_width = parent.document.body.clientWidth;
+            // parent_height = parent.innerHeight;
+            // parent_width = parent.innerWidth;
 
             address_blurb = document.getElementById("addressblurb");
             
