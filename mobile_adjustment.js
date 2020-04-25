@@ -193,6 +193,7 @@ if (screen_width < 1000) {
     if (lock_control) {
         active_embed = "google_map";
 
+        document.getElementById("map_iframe").scrolling="no";
         adjustGoogleMap();
 
         window.addEventListener("orientationchange", function() {
