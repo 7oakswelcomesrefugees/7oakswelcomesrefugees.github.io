@@ -167,36 +167,6 @@ if (screen_width < 1050) {
 
         while (overlays[0]) {
             overlays[0].remove();
-            console.log("rotated");
-            setTimeout(adjustGoogleMap,  adjust_delay); 
-            }, false);    
-
-        if (screen_width < 480) {
-
-            pic = lock_control.querySelectorAll("img")[0];
-            pic.src = "https://7oakswelcomesrefugees.github.io/GoogleMapsLogo.png";
-
-            sentence = lock_control.querySelectorAll("p")[0];
-            sentence.innerHTML = "Click to load Google map"
-
-            top_overlay = document.getElementById('top_overlay');
-            top_overlay.removeEventListener('click',unlockMap);
-            top_overlay.removeEventListener('click',lockMap);
-            top_overlay.addEventListener('click', loadMap);
-            
-
-
-        } else {
-            overlays = document.getElementsByClassName("overlay");
-
-            while (overlays[0]) {
-                overlays[0].remove()
-            }
-<<<<<<< HEAD
-        
-=======
-            
->>>>>>> parent of 4e116a1... Update mobile_adjustment.js
         }
     }
 
@@ -221,7 +191,7 @@ if (active_embed == "cheque_address") { updateFunction = adjustChequeAddress; }
 if (active_embed == "trustee_id") { updateFunction = adjustTrusteeId; }
 if (active_embed == "address_blurb") { updateFunction = adjustAddressBlurb; }
 if (active_embed == "family_testimonials") { updateFunction = adjustFamilyTestimonials; }
-if (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
+ fif (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
 
 var adjust_delay = 150;
 
