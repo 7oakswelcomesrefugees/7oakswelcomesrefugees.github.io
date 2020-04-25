@@ -104,9 +104,9 @@ if (screen_width < 1000) {
         function adjustTrusteeId() {
             console.log(active_embed);
 
-            parent_frame = parent.document.getElementsByTagName('iframe')[0];
-            parent_frame.scrolling="no";
-            parent_height = parent_frame.contentWindow.innerHeight;
+            // parent_frame = parent.document.getElementsByTagName('iframe')[0];
+            // parent_frame.scrolling="no";
+            parent_height = parent.innerHeight; //parent_frame.contentWindow.innerHeight;
             dynamic_fontsize = Math.round(parent_height/2.5);
 
             trustee_id = document.getElementsByTagName("a")[0];
