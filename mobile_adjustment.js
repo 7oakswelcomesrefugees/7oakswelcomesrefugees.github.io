@@ -93,8 +93,13 @@ if (screen_width < 1050) {
         adjustTrusteeId();
 
         function adjustTrusteeId() {
+            if (screen_width < 480) {
+                max_fontsize = 20;
+            } else {
+                max_fontsize = 24;
+            }
+
             divisor_trustee_id = 2.6;
-            max_fontsize = 24;
 
             parent_height = parent.innerHeight; //parent_frame.contentWindow.innerHeight;
             dynamic_fontsize = Math.round(parent_height/divisor_trustee_id);
