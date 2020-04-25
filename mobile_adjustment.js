@@ -7,9 +7,9 @@ Script include tag:
 
 var active_embed;
 var screen_width = screen.width;
-// if (true) {
-//     var screen_width = 500;
-// }
+if (true) {
+    var screen_width = 500;
+}
 
 if (document.getElementsByClassName("donate")[0]) {
     if (screen_width < 480) {
@@ -43,13 +43,16 @@ if (document.getElementsByClassName("donate")[0]) {
     }
 
     cells = document.getElementsByTagName("p");
+    console.log("hello")
     if (cells[0]) {
+        console.log("hello")
         active_embed = "cheque_address";
         adjustChequeAddress();
     }
 
     function adjustChequeAddress() {
-        divisor_cheque_address = 7.5;
+        console.log("hello")
+        divisor_cheque_address = 5;
 
         parent_height=parent.innerHeight;
         dynamic_fontsize = Math.round(parent_height/divisor_cheque_address);
