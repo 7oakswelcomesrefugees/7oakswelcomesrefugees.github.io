@@ -13,76 +13,7 @@ var screen_width = screen.width;
 var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
 
-if (document.getElementsByClassName("donate")[0]) {
-    if (screen_width < 480) {
-        max_fontsize = 20;
-    } else {
-        max_fontsize = 22;
-    }
 
-    cells = document.getElementsByTagName("td");
-    if (cells[0]) {
-        active_embed = "bank_table";
-
-        parent_frame = parent.document.getElementsByTagName('iframe')[0];
-        parent_frame.scrolling="no";
-        if (iOS) { 
-            table_div = document.getElementById("table_div");
-            table_div.style.height="100%"; 
-            table_div.addEventListener("touchmove", preventScroll); 
-            table_div.addEventListener("touchend", hideScrollAlert); 
-        } 
-
-        adjustBankTable();
-    }
-
-    function adjustBankTable() {
-        divisor_bank_table = 6.7;
-
-        parent_height = parent.innerHeight;
-        dynamic_fontsize = Math.round(parent_height/divisor_bank_table);
-        new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
-
-        cells = document.getElementsByTagName("td");
-       
-        for (var i=0; i< cells.length; i++) {
-            cells[i].style.fontSize = new_fontsize.toString() + "px";
-          
-            if (cells[i].innerText == "Sevenoaks Welcomes Refugees") {
-                cells[i].innerText = "Sevenoaks W. R.";
-            }
-        }    
-    }
-
-    cells = document.getElementsByTagName("p");
-    if (cells[0]) {
-        active_embed = "cheque_address";
-
-        parent_frame = parent.document.getElementsByTagName('iframe')[0];
-        parent_frame.scrolling="no";
-        if (iOS) { 
-            address_div = document.getElementById("address_div");
-            address_div.style.height="100%"; 
-            address_div.addEventListener("touchmove", preventScroll);
-            address_div.addEventListener("touchend", hideScrollAlert);
-        }
-
-        adjustChequeAddress();
-    }
-
-    function adjustChequeAddress() {
-        divisor_cheque_address = 7.5;
-
-        parent_height=parent.innerHeight;
-        dynamic_fontsize = Math.round(parent_height/divisor_cheque_address);
-        new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
-
-        cells = document.getElementsByTagName("p");     
-        for (var i=0; i< cells.length; i++) {
-          cells[i].style.fontSize = new_fontsize.toString() + "px";
-        }
-    }
-}
 
 
 
@@ -102,6 +33,77 @@ if (screen_width < 1050) {
   
         // Append link element to HTML head 
         head.appendChild(link);
+    }
+
+    if (document.getElementsByClassName("donate")[0]) {
+        if (screen_width < 480) {
+            max_fontsize = 20;
+        } else {
+            max_fontsize = 22;
+        }
+
+        cells = document.getElementsByTagName("td");
+        if (cells[0]) {
+            active_embed = "bank_table";
+
+            parent_frame = parent.document.getElementsByTagName('iframe')[0];
+            parent_frame.scrolling="no";
+            if (iOS) { 
+                table_div = document.getElementById("table_div");
+                table_div.style.height="100%"; 
+                table_div.addEventListener("touchmove", preventScroll); 
+                table_div.addEventListener("touchend", hideScrollAlert); 
+            } 
+
+            adjustBankTable();
+        }
+
+        function adjustBankTable() {
+            divisor_bank_table = 6.7;
+
+            parent_height = parent.innerHeight;
+            dynamic_fontsize = Math.round(parent_height/divisor_bank_table);
+            new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
+
+            cells = document.getElementsByTagName("td");
+           
+            for (var i=0; i< cells.length; i++) {
+                cells[i].style.fontSize = new_fontsize.toString() + "px";
+              
+                if (cells[i].innerText == "Sevenoaks Welcomes Refugees") {
+                    cells[i].innerText = "Sevenoaks W. R.";
+                }
+            }    
+        }
+
+        cells = document.getElementsByTagName("p");
+        if (cells[0]) {
+            active_embed = "cheque_address";
+
+            parent_frame = parent.document.getElementsByTagName('iframe')[0];
+            parent_frame.scrolling="no";
+            if (iOS) { 
+                address_div = document.getElementById("address_div");
+                address_div.style.height="100%"; 
+                address_div.addEventListener("touchmove", preventScroll);
+                address_div.addEventListener("touchend", hideScrollAlert);
+            }
+
+            adjustChequeAddress();
+        }
+
+        function adjustChequeAddress() {
+            divisor_cheque_address = 7.5;
+
+            parent_height=parent.innerHeight;
+            dynamic_fontsize = Math.round(parent_height/divisor_cheque_address);
+            new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
+
+            cells = document.getElementsByTagName("p");     
+            for (var i=0; i< cells.length; i++) {
+              cells[i].style.fontSize = new_fontsize.toString() + "px";
+            }
+        }
     }
 
 
