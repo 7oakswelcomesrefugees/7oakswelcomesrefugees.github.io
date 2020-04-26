@@ -11,7 +11,9 @@ var screen_width = screen.width;
 //     var screen_width = 500;
 // }
 var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
+if (!iOS && document.getElementById("scroll_alert")) {
+    document.getElementById("scroll_alert").remove();
+}
 
 
 
@@ -230,10 +232,6 @@ if (screen_width < 1050) {
         return map_height;
     }
 
-} else {
-    if (!iOS && document.getElementById("scroll_alert")) {
-        document.getElementById("scroll_alert").remove();
-    }
 }
 
 function preventScroll(e) {
