@@ -56,7 +56,7 @@ if (screen_width < 1050) {
                 table_div.addEventListener("touchmove", function(event) {
                     console.log("captured");
                     els = event.composedPath();
-                    // if (event.target == ) { event.stopPropagation(); }
+                    if (event.target.tagName == "BODY") { event.stopPropagation(); }
                 }   ,true); 
                 table_div.addEventListener("touchend", hideScrollAlert); 
             } 
