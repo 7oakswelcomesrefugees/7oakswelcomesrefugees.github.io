@@ -22,6 +22,11 @@ if (document.getElementsByClassName("donate")[0]) {
     cells = document.getElementsByTagName("td");
     if (cells[0]) {
         active_embed = "bank_table";
+
+        document.getElementById("table_div").ontouchmove = function(e) {
+            e.preventDefault();
+        }
+
         adjustBankTable();
     }
 
@@ -51,6 +56,10 @@ if (document.getElementsByClassName("donate")[0]) {
 
     function adjustChequeAddress() {
         divisor_cheque_address = 7.5;
+
+        document.getElementById("address_div").ontouchmove = function(e) {
+            e.preventDefault();
+        };
 
         parent_height=parent.innerHeight;
         dynamic_fontsize = Math.round(parent_height/divisor_cheque_address);
@@ -89,6 +98,10 @@ if (screen_width < 1050) {
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
+
+        document.getElementsByTagName("body")[0].ontouchmove = function (e) {
+            e.preventDefault();
+        };
         
         adjustTrusteeId();
 
@@ -129,6 +142,9 @@ if (screen_width < 1050) {
             parent_width = parent.document.body.clientWidth;
 
             address_blurb = document.getElementById("addressblurb");
+            address_blurb.parentElement.ontouchmove = function(e) {
+                e.preventDefault();
+            };
 
             dynamic_fontsize = Math.round(parent_height/divisors_address_blurb[0]);
             address_blurb.style.fontSize = dynamic_fontsize.toString() + "px";
