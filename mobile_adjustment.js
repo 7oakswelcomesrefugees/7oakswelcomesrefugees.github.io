@@ -99,7 +99,7 @@ if (screen_width < 1050) {
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
 
-        document.getElementsByTagName("body")[0].ontouchmove = function (e) {
+        document.getElementsByTagName("div")[0].ontouchmove = function (e) {
             e.preventDefault();
         };
         
