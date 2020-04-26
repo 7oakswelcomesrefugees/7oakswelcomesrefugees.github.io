@@ -85,12 +85,6 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		margin:0;
 	}
 
-	#table_div {
-		z-index: 99;
-		pointer-events: none;
-		position: relative;
-	}
-
 	table.donate {
 		padding-left: 3px
 	}
