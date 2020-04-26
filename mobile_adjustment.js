@@ -53,7 +53,7 @@ if (screen_width < 1050) {
             if (iOS) { 
                 table_div = document.getElementById("table_div");
                 table_div.style.height="100%"; 
-                table_div.addEventListener("touchmove", preventScroll); 
+                table_div.addEventListener("touchmove", function() {console.log("captured");}   ,false); 
                 table_div.addEventListener("touchend", hideScrollAlert); 
             } 
 
