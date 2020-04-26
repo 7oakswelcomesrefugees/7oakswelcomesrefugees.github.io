@@ -26,7 +26,8 @@ if (document.getElementsByClassName("donate")[0]) {
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
-        if (iOS) { document.getElementById("table_div").addEventListener("touchmove", preventScroll); } 
+        //if (iOS) { document.getElementById("table_div").addEventListener("touchmove", preventScroll); } 
+        if (iOS) { document.getElementsByTagName("body")[0].addEventListener("touchmove", preventScroll); } 
 
         adjustBankTable();
     }
