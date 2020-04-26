@@ -140,11 +140,7 @@ if (screen_width < 1050) {
             trustee_id.parentElement.style.marginTop = "2px";
         }
         
-    } else {
-        if (!iOS && document.getElementById("scroll_alert")) {
-            document.getElementById("scroll_alert").remove();
-        }
-    }
+    } 
 
     if (document.getElementsByClassName("contactus")[0]) {
         active_embed = "address_blurb";
@@ -234,6 +230,10 @@ if (screen_width < 1050) {
         return map_height;
     }
 
+} else {
+    if (!iOS && document.getElementById("scroll_alert")) {
+        document.getElementById("scroll_alert").remove();
+    }
 }
 
 function preventScroll(e) {
