@@ -57,6 +57,7 @@ if (document.getElementsByClassName("donate")[0]) {
         document.getElementById("address_div").parentElement.addEventListener("touchmove", preventScroll);
         document.getElementById("address_div").addEventListener("touchmove", preventScroll);
         document.getElementById("address_div").children[0].addEventListener("touchmove", preventScroll);
+        document.addEventListener("touchmove", preventScroll);
 
         adjustChequeAddress();
     }
