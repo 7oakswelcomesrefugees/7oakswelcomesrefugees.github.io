@@ -164,6 +164,10 @@ if (screen_width < 1050) {
         active_embed = "family_testimonials";
         adjustFamilyTestimonials();
 
+        document.getElementsByTagName("div")[0].ontouchmove = function(e) {
+            e.preventDefault();
+        };
+
         function adjustFamilyTestimonials() {
             image1 = document.getElementById("image1");
             image2 = document.getElementById("image2");
