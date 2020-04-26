@@ -114,6 +114,10 @@ if (screen_width < 1050) {
 
     if (document.getElementsByClassName("contactus")[0]) {
         active_embed = "address_blurb";
+        parent_frame = parent.document.getElementsByTagName('iframe').ontouchmove = function(e) {
+            console.log("moving");
+        };
+
         adjustAddressBlurb();
 
         function adjustAddressBlurb() {
