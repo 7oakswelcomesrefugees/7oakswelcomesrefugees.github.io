@@ -238,11 +238,11 @@ function preventScroll(e) {
 function hideScrollAlert(e) {
     fade_div = document.getElementById("scroll_alert");
     fade_div.style.opacity = 0;
-    fade_div.style.display = "hidden";
+    fade_div.style.display = "none";
 }
 
 function fadeIn(element) {
-    var op = 0;  // initial opacity
+    var op = 0.1;  // initial opacity
     element.style.display = 'block';
     var timer = setInterval(function () {
         if (op >= 0.3){
