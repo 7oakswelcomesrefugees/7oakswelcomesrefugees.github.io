@@ -23,9 +23,7 @@ if (document.getElementsByClassName("donate")[0]) {
     if (cells[0]) {
         active_embed = "bank_table";
 
-        document.getElementById("table_div").ontouchmove = function(e) {
-            e.preventDefault();
-        }
+        document.getElementById("table_div").addEventListener("touchmove", preventScroll); 
 
         adjustBankTable();
     }
@@ -51,15 +49,15 @@ if (document.getElementsByClassName("donate")[0]) {
     cells = document.getElementsByTagName("p");
     if (cells[0]) {
         active_embed = "cheque_address";
+        document.getElementById("address_div").addEventListener("touchmove", preventScroll);
+
         adjustChequeAddress();
     }
 
     function adjustChequeAddress() {
         divisor_cheque_address = 7.5;
 
-        document.getElementById("address_div").ontouchmove = function(e) {
-            e.preventDefault();
-        };
+        
 
         parent_height=parent.innerHeight;
         dynamic_fontsize = Math.round(parent_height/divisor_cheque_address);
@@ -127,9 +125,7 @@ if (screen_width < 1050) {
 
     if (document.getElementsByClassName("contactus")[0]) {
         active_embed = "address_blurb";
-        parent.document.getElementsByTagName('iframe')[0].ontouchmove = function(e) {
-            console.log("moving");
-        };
+        parent.document.getElementsByTagName('iframe')[0].ontouchmove = preventScroll; 
 
         adjustAddressBlurb();
 
@@ -164,10 +160,6 @@ if (screen_width < 1050) {
         active_embed = "family_testimonials";
         adjustFamilyTestimonials();
 
-        document.getElementsByTagName("div")[0].ontouchmove = function(e) {
-            e.preventDefault();
-        };
-
         function adjustFamilyTestimonials() {
             image1 = document.getElementById("image1");
             image2 = document.getElementById("image2");
@@ -190,14 +182,6 @@ if (screen_width < 1050) {
         parent_frame.scrolling="no";
         parent_frame.style.overflow="hidden";
         document.getElementById("map_iframe").scrolling="no";
-
-        document.ontouchmove = function (e) {
-          e.preventDefault();
-        };
-
-        parent.document.ontouchmove = function (e) {
-          e.preventDefault();
-        };
 
         body = document.getElementsByTagName("body")[0];
         body.style.marginTop ="7px";
@@ -224,6 +208,10 @@ if (screen_width < 1050) {
         return map_height;
     }
 
+}
+
+function preventScroll(e) {
+    e.preventDefault();
 }
 
 var updateFunction;
