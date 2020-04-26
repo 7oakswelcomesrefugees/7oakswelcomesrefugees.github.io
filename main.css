@@ -8,10 +8,6 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
 
- * {
-   outline: 1px solid red;
-  }
-
 	:root {
 	  --map-window-height: 480px;
 	}
