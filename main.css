@@ -48,6 +48,15 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		line-height: 1.5;
 	}
 
+	.scroll_alert {
+		width:100%;
+		height:100%;
+		display:none;
+		background-color: gray;
+		opacity:0;
+		position:absolute;
+	}
+
 	/* Get involved page */
 	p.getinvolved {
 		font-size: 18px; 
