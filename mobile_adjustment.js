@@ -132,7 +132,9 @@ if (screen_width < 1050) {
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
-        parent.document.getElementsByTagName('iframe')[0].ontouchmove = preventScroll; 
+
+        address_blurb = document.getElementById("addressblurb");
+        address_blurb.parentElement.addEventListener("touchmove", preventScroll)
 
         adjustAddressBlurb();
 
@@ -141,9 +143,6 @@ if (screen_width < 1050) {
 
             parent_height = parent.document.body.clientHeight;
             parent_width = parent.document.body.clientWidth;
-
-            address_blurb = document.getElementById("addressblurb");
-            address_blurb.parentElement.addEventListener("touchmove", preventScroll)
 
             dynamic_fontsize = Math.round(parent_height/divisors_address_blurb[0]);
             address_blurb.style.fontSize = dynamic_fontsize.toString() + "px";
