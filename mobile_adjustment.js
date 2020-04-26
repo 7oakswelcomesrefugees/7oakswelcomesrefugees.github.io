@@ -97,9 +97,7 @@ if (screen_width < 1050) {
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
 
-        document.getElementsByTagName("div")[0].ontouchmove = function (e) {
-            e.preventDefault();
-        };
+        document.getElementsByTagName("div")[0].addEventListener("touchmove", preventScroll); 
         
         adjustTrusteeId();
 
@@ -138,9 +136,7 @@ if (screen_width < 1050) {
             parent_width = parent.document.body.clientWidth;
 
             address_blurb = document.getElementById("addressblurb");
-            address_blurb.parentElement.ontouchmove = function(e) {
-                e.preventDefault();
-            };
+            address_blurb.parentElement.addEventListener("touchmove", preventScroll)
 
             dynamic_fontsize = Math.round(parent_height/divisors_address_blurb[0]);
             address_blurb.style.fontSize = dynamic_fontsize.toString() + "px";
