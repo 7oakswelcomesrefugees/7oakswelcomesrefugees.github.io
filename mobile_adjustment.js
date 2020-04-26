@@ -132,7 +132,23 @@ if (screen_width < 1050) {
         parent_frame.scrolling="no";
 
         address_blurb = document.getElementById("addressblurb");
-         if (iOS) { address_blurb.parentElement.addEventListener("touchmove", preventScroll); }
+        var css = '* { overflow: hidden; }',
+        head = document.head || document.getElementsByTagName('head')[0],
+        style = document.createElement('style');
+        head.appendChild(style);
+
+        head = parent.document.head || parent.document.getElementsByTagName('head')[0],
+        style = parent.document.createElement('style');
+        head.appendChild(style);
+
+        style.type = 'text/css';
+        if (style.styleSheet){
+          // This is required for IE8 and below.
+          style.styleSheet.cssText = css;
+        } else {
+          style.appendChild(document.createTextNode(css));
+        }
+         // if (iOS) { address_blurb.parentElement.addEventListener("touchmove", preventScroll); }
 
         adjustAddressBlurb();
 
