@@ -23,6 +23,8 @@ if (document.getElementsByClassName("donate")[0]) {
     if (cells[0]) {
         active_embed = "bank_table";
 
+        parent_frame = parent.document.getElementsByTagName('iframe')[0];
+        parent_frame.scrolling="no";
         document.getElementById("table_div").addEventListener("touchmove", preventScroll); 
 
         adjustBankTable();
@@ -49,6 +51,9 @@ if (document.getElementsByClassName("donate")[0]) {
     cells = document.getElementsByTagName("p");
     if (cells[0]) {
         active_embed = "cheque_address";
+
+        parent_frame = parent.document.getElementsByTagName('iframe')[0];
+        parent_frame.scrolling="no";
         document.getElementById("address_div").addEventListener("touchmove", preventScroll);
 
         adjustChequeAddress();
@@ -56,8 +61,6 @@ if (document.getElementsByClassName("donate")[0]) {
 
     function adjustChequeAddress() {
         divisor_cheque_address = 7.5;
-
-        
 
         parent_height=parent.innerHeight;
         dynamic_fontsize = Math.round(parent_height/divisor_cheque_address);
@@ -123,6 +126,9 @@ if (screen_width < 1050) {
 
     if (document.getElementsByClassName("contactus")[0]) {
         active_embed = "address_blurb";
+
+        parent_frame = parent.document.getElementsByTagName('iframe')[0];
+        parent_frame.scrolling="no";
         parent.document.getElementsByTagName('iframe')[0].ontouchmove = preventScroll; 
 
         adjustAddressBlurb();
@@ -130,8 +136,6 @@ if (screen_width < 1050) {
         function adjustAddressBlurb() {
             divisors_address_blurb = [8.5,10];
 
-            parent_frame = parent.document.getElementsByTagName('iframe')[0];
-            parent_frame.scrolling="no";
             parent_height = parent.document.body.clientHeight;
             parent_width = parent.document.body.clientWidth;
 
