@@ -245,7 +245,7 @@ function fadeIn(element) {
     var op = 0;  // initial opacity
     element.style.display = 'block';
     var timer = setInterval(function () {
-        if (op >= 1){
+        if (op >= 0.3){
             clearInterval(timer);
         }
         element.style.opacity = op;
