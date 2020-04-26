@@ -167,6 +167,14 @@ if (screen_width < 1050) {
         parent_frame.style.overflow="hidden";
         document.getElementById("map_iframe").scrolling="no";
 
+        document.ontouchmove = function (e) {
+          e.preventDefault();
+        };
+
+        parent.document.ontouchmove = function (e) {
+          e.preventDefault();
+        };
+
         body = document.getElementsByTagName("body")[0];
         body.style.marginTop ="7px";
 
