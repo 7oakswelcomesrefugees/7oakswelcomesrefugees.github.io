@@ -153,6 +153,7 @@ if (screen_width < 1050) {
             address_blurb.style.height="100%"; 
             address_blurb.parentElement.addEventListener("touchmove", preventScroll); 
             address_blurb.parentElement.addEventListener("touchend", hideScrollAlert);
+            document.getElementById("scroll_alert").height = "100%"
         }
 
         adjustAddressBlurb();
