@@ -26,8 +26,7 @@ if (document.getElementsByClassName("donate")[0]) {
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
-        //if (iOS) { document.getElementById("table_div").addEventListener("touchmove", preventScroll); } 
-        if (iOS) { document.getElementsByTagName("body")[0].addEventListener("touchmove", preventScroll); } 
+        if (iOS) { document.getElementById("table_div").style.height=100%; document.getElementById("table_div").addEventListener("touchmove", preventScroll); } 
 
         adjustBankTable();
     }
@@ -56,7 +55,7 @@ if (document.getElementsByClassName("donate")[0]) {
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
-        if (iOS) { document.getElementById("address_div").addEventListener("touchmove", preventScroll) }
+        if (iOS) { document.getElementById("address_div").style.height=100%; document.getElementById("address_div").addEventListener("touchmove", preventScroll) }
 
         adjustChequeAddress();
     }
@@ -102,7 +101,7 @@ if (screen_width < 1050) {
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
 
-        if (iOS) { document.getElementsByTagName("div")[0].addEventListener("touchmove", preventScroll) }
+        if (iOS) { document.getElementsByTagName("div")[0].style.height=100%; document.getElementsByTagName("div")[0].addEventListener("touchmove", preventScroll) }
         
         adjustTrusteeId();
 
@@ -133,7 +132,7 @@ if (screen_width < 1050) {
         parent_frame.scrolling="no";
 
         address_blurb = document.getElementById("addressblurb");
-        if (iOS) { address_blurb.parentElement.addEventListener("touchmove", preventScroll); }
+        if (iOS) { address_blurb.style.height=100%; address_blurb.parentElement.addEventListener("touchmove", preventScroll); }
 
         adjustAddressBlurb();
 
