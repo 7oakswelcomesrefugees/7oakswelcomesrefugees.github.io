@@ -112,7 +112,8 @@ if (screen_width < 1050) {
         parent_frame.scrolling="no";
 
         if (iOS) { 
-            div = document.getElementsByTagName("div")[0].style.height="100%"; 
+            div = document.getElementsByTagName("div")[0];
+            div.style.height="100%"; 
             div.addEventListener("touchmove", preventScroll);
             div.addEventListener("touchend", hideScrollAlert);
         }
