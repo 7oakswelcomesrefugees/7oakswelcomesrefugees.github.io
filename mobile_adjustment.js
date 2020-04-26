@@ -164,6 +164,7 @@ if (screen_width < 1050) {
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
+        parent_frame.style.overflow="hidden";
         document.getElementById("map_iframe").scrolling="no";
 
         body = document.getElementsByTagName("body")[0];
