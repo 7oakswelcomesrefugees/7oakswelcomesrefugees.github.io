@@ -53,15 +53,7 @@ if (screen_width < 1050) {
             if (iOS) { 
                 table_div = document.getElementById("table_div");
                 table_div.style.height="100%"; 
-                table_div.addEventListener("touchmove", function(event) {
-                    console.log("captured");
-                    els = event.composedPath();
-                    console.log(event.target.tagName);
-                    if (event.target.tagName == "TD") { 
-                        console.log("match")
-                        event.stopPropagation(); 
-                    }
-                }   ,true); 
+                table_div.addEventListener("touchmove", preventScroll); 
                 table_div.addEventListener("touchend", hideScrollAlert); 
             } 
 
@@ -244,9 +236,6 @@ if (screen_width < 1050) {
 
 function preventScroll(e) {
     fade_div = document.getElementById("scroll_alert");
-
-    els = e.composedPath();
-
     if (fade_div.style.display == "none") {
         fadeIn(fade_div);
         fade_div.style.display = "block";
