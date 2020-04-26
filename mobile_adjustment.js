@@ -25,7 +25,7 @@ if (document.getElementsByClassName("donate")[0]) {
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
-        document.getElementById("table_div").addEventListener("touchmove", preventScroll); 
+        // document.getElementById("table_div").addEventListener("touchmove", preventScroll); 
 
         adjustBankTable();
     }
@@ -54,7 +54,7 @@ if (document.getElementsByClassName("donate")[0]) {
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
-        document.getElementById("address_div").addEventListener("touchmove", preventScroll);
+        // document.getElementById("address_div").addEventListener("touchmove", preventScroll);
 
         adjustChequeAddress();
     }
