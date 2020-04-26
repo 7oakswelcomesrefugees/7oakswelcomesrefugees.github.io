@@ -53,7 +53,11 @@ if (screen_width < 1050) {
             if (iOS) { 
                 table_div = document.getElementById("table_div");
                 table_div.style.height="100%"; 
-                table_div.addEventListener("touchmove", function() {console.log("captured");}   ,true); 
+                table_div.addEventListener("touchmove", function(event) {
+                    console.log("captured");
+                    els = event.composedPath();
+                    if (event.target == ) { event.stopPropagation(); }
+                }   ,true); 
                 table_div.addEventListener("touchend", hideScrollAlert); 
             } 
 
