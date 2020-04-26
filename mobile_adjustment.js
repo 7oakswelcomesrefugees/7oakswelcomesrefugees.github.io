@@ -37,9 +37,9 @@ if (screen_width < 1050) {
 
     if (document.getElementsByClassName("donate")[0]) {
         if (screen_width < 480) {
-            max_fontsize = 20;
+            max_fontsize = 18;
         } else {
-            max_fontsize = 22;
+            max_fontsize = 20;
         }
 
         cells = document.getElementsByTagName("td");
