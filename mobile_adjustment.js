@@ -230,20 +230,21 @@ if (screen_width < 1050) {
 
 function preventScroll(e) {
     fade_div = document.getElementById("scroll_alert");
-    fade_div.style.display = "block";
-    fadeIn(fade_div);
+    if (fade_div.style.display == "none") {
+        fadeIn(fade_div);
+        fade_div.style.display = "block";
+    }
     e.preventDefault();
 }
 
 function hideScrollAlert(e) {
     fade_div = document.getElementById("scroll_alert");
-    fade_div.style.opacity = 0;
+    fade_div.style.opacity = 0.1;
     fade_div.style.display = "none";
 }
 
 function fadeIn(element) {
     var op = 0.1;  // initial opacity
-    element.style.display = 'block';
     var timer = setInterval(function () {
         if (op >= 0.3){
             clearInterval(timer);
