@@ -140,6 +140,10 @@ if (screen_width < 1050) {
             trustee_id.parentElement.style.marginTop = "2px";
         }
         
+    } else {
+        if (!iOS && document.getElementById("scroll_alert")) {
+            document.getElementById("scroll_alert").remove();
+        }
     }
 
     if (document.getElementsByClassName("contactus")[0]) {
