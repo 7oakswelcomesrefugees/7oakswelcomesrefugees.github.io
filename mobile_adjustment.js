@@ -40,7 +40,7 @@ if (document.getElementsByClassName("donate")[0]) {
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
-        parent_frame.style.pointerEvents = "none";
+        // parent_frame.style.pointerEvents = "none";
         // document.getElementById("table_div").addEventListener("touchmove", preventScroll); 
 
         adjustBankTable();
