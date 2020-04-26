@@ -236,6 +236,9 @@ if (screen_width < 1050) {
 
 function preventScroll(e) {
     fade_div = document.getElementById("scroll_alert");
+
+    els = e.composedPath();
+
     if (fade_div.style.display == "none") {
         fadeIn(fade_div);
         fade_div.style.display = "block";
