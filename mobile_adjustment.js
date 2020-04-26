@@ -56,8 +56,11 @@ if (screen_width < 1050) {
                 table_div.addEventListener("touchmove", function(event) {
                     console.log("captured");
                     els = event.composedPath();
-                    console.log(event.target);
-                    if (event.target.tagName == "TD") { event.stopPropagation(); }
+                    console.log(event.target.tagName);
+                    if (event.target.tagName == "TD") { 
+                        console.log("match")
+                        event.stopPropagation(); 
+                    }
                 }   ,true); 
                 table_div.addEventListener("touchend", hideScrollAlert); 
             } 
