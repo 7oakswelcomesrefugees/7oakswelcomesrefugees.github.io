@@ -12,7 +12,10 @@ var screen_width = screen.width;
 // }
 var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 if (!iOS && document.getElementById("scroll_alert")) {
-    document.getElementById("scroll_alert").remove();
+    scroll_alert = document.getElementById("scroll_alert");
+    if (scroll_alert) {
+        document.getElementById("scroll_alert").remove();
+    }
 }
 
 
