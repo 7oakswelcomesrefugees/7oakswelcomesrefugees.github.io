@@ -59,8 +59,7 @@ if (screen_width < 1050) {
                 image2.parentElement.style.padding = 0;
                 image2.parentElement.style.display = "block";
             }
-        }
-        if (iOS) { 
+        } else if (iOS) { 
             div = document.getElementsByTagName("div")[0];
             div.addEventListener("touchmove", preventScroll);
             div.addEventListener("touchend", hideScrollAlert);
