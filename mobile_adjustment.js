@@ -249,18 +249,19 @@ if (screen_width < 1050) {
             table_div.addEventListener("touchend", hideScrollAlert); 
         } 
 
-        if (email = document.getElementById("email")) {
+        if (document.getElementById("email")) {
             adjustFooter();
         }
     
         function adjustFooter() {
-            divisor_footer_email = 7.5;
+            divisor_footer_email = 20;
 
             parent_width=parent.innerWidth;
             dynamic_fontsize = Math.round(parent_width/divisor_footer_email);
             new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
 
             email = document.getElementById("email");    
+            email.style.fontSize = new_fontsize.toString() + "px";
         }
     }
 
