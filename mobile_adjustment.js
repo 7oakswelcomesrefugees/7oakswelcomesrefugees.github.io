@@ -217,6 +217,19 @@ if (screen_width < 1050) {
         while (overlays[0]) {
             overlays[0].remove();
         }
+
+        function adjustGoogleMap() {
+            map_height = getMapHeight();
+            document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
+            document.getElementById("map_iframe").height = map_height;
+        }
+
+        function getMapHeight() {
+            scale_map = 0.7; //0.64
+            parent_height = parent.document.body.clientHeight;
+            map_height = Math.round(parent_height*scale_map);
+            return map_height;
+        }
     }
 
     if (document.getElementsByClassName("footer")[0]) {
@@ -249,19 +262,6 @@ if (screen_width < 1050) {
 
             email = document.getElementById("email");    
         }
-    }
-
-    function adjustGoogleMap() {
-        map_height = getMapHeight();
-        document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
-        document.getElementById("map_iframe").height = map_height;
-    }
-
-    function getMapHeight() {
-        scale_map = 0.7; //0.64
-        parent_height = parent.document.body.clientHeight;
-        map_height = Math.round(parent_height*scale_map);
-        return map_height;
     }
 
 }
