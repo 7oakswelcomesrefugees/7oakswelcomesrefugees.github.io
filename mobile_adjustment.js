@@ -227,14 +227,13 @@ if (screen_width < 1050) {
         if (iOS) {
             map_iframe.remove();
             document.getElementById("iOS_maps").style.display="block";
-        } else {
-            adjustGoogleMap();
-        }
+        } 
+        adjustGoogleMap();
+        
 
         function adjustGoogleMap() {
             map_height = getMapHeight();
             document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
-            document.getElementById("map_iframe").height = map_height;
         }
 
         function getMapHeight() {
