@@ -300,6 +300,7 @@ if (active_embed == "trustee_id") { updateFunction = adjustTrusteeId; }
 if (active_embed == "address_blurb") { updateFunction = adjustAddressBlurb; }
 if (active_embed == "family_testimonials") { updateFunction = adjustFamilyTestimonials; }
 if (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
+if (active_embed == "footer") { updateFunction = adjustFooter; }
 
 var adjust_delay = 150;
 if (active_embed == "google_map") {
