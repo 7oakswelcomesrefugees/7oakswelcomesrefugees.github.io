@@ -247,9 +247,9 @@ if (screen_width < 1050) {
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
         if (iOS) { 
-            table_div = document.getElementsByTagName("div")[0];
-            table_div.addEventListener("touchmove", preventScroll); 
-            table_div.addEventListener("touchend", hideScrollAlert); 
+            div = document.getElementsByTagName("div")[0];
+            div.addEventListener("touchmove", preventScroll); 
+            div.addEventListener("touchend", hideScrollAlert); 
         } 
 
         if (document.getElementById("email")) {
