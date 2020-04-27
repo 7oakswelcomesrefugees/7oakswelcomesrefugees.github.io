@@ -275,7 +275,8 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	#lawyer_stuff {
 		text-align: right;
 		font-family: Oswald;
-		font-size: 12px;
+		font-size: 15px;
+		line-height: 1.3;
 	}
 	#email_div {
 		width:100%;
