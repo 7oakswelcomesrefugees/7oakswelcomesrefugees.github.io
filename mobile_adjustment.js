@@ -219,6 +219,38 @@ if (screen_width < 1050) {
         }
     }
 
+    if (document.getElementsByClassName("footer")[0]) {
+        active_embed = "footer";
+
+        if (screen_width < 480) {
+            max_fontsize = 18;
+        } else {
+            max_fontsize = 20;
+        }
+
+        parent_frame = parent.document.getElementsByTagName('iframe')[0];
+        parent_frame.scrolling="no";
+        if (iOS) { 
+            table_div = document.getElementsByTagName("div")[0];
+            table_div.addEventListener("touchmove", preventScroll); 
+            table_div.addEventListener("touchend", hideScrollAlert); 
+        } 
+
+        if (email = document.getElementById("email")) {
+            adjustFooter();
+        }
+    
+        function adjustFooter() {
+            divisor_footer_email = 7.5;
+
+            parent_width=parent.innerWidth;
+            dynamic_fontsize = Math.round(parent_width/divisor_footer_email);
+            new_fontsize = Math.min(max_fontsize,dynamic_fontsize);
+
+            email = document.getElementById("email");    
+        }
+    }
+
     function adjustGoogleMap() {
         map_height = getMapHeight();
         document.documentElement.style.setProperty("--map-window-height", map_height.toString() + "px");
