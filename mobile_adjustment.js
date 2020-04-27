@@ -212,17 +212,23 @@ if (screen_width < 1050) {
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
         parent_frame.style.overflow="hidden";
-        document.getElementById("map_iframe").scrolling="no";
+        map_iframe = document.getElementById("map_iframe");
+        map_iframescrolling="no";
 
         body = document.getElementsByTagName("body")[0];
         body.style.marginTop ="7px";
 
-        adjustGoogleMap();
-        
         overlays = document.getElementsByClassName("overlay");
 
         while (overlays[0]) {
             overlays[0].remove();
+        }
+
+        if (iOS) {
+            map_iframe.remove();
+            document.getElementById("iOS_maps").style.display="block";
+        } else {
+            adjustGoogleMap();
         }
 
         function adjustGoogleMap() {
