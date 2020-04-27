@@ -17,6 +17,10 @@ a.aboutus {
 		height: 40px;
 	}
 
+#email_div {
+	top:0;
+}
+
 /* Contact us address */	
 
 /*#addressblurb {
