@@ -186,6 +186,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 
 	.single_map {
 		height: var(--map-window-height);
+		border: 2px solid #212121;
 	}
 
 	#map_iframe {
