@@ -270,7 +270,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	
 	#email {
 		text-align: right;
-		margin-top:0px;
+		margin-top:2px;
 	}
 	#lawyer_stuff {
 		text-align: right;
