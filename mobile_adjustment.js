@@ -39,31 +39,33 @@ if (screen_width < 1050) {
         // Append link element to HTML head 
         head.appendChild(link);
 
-        if (document.getElementById("family_testimonials")) {
-        active_embed = "family_testimonials";
+    } 
 
+    if (document.getElementById("family_testimonials")) {
+        if (screen_width < 480) {
+            active_embed = "family_testimonials";
+
+            adjustFamilyTestimonials();
+
+            function adjustFamilyTestimonials() {
+                image1 = document.getElementById("image1");
+                image2 = document.getElementById("image2");
+                image1.src = "https://7oakswelcomesrefugees.github.io/RefugeeSpeechBubbles_splitA.png"
+                image2.src = "https://7oakswelcomesrefugees.github.io/RefugeeSpeechBubbles_splitB.png"
+
+                image1.parentElement.style.width = "100%";
+                image1.parentElement.style.padding = 0;
+                image2.parentElement.style.width = "100%";
+                image2.parentElement.style.padding = 0;
+                image2.parentElement.style.display = "block";
+            }
+        }
         if (iOS) { 
             div = document.getElementsByTagName("div")[0];
             div.addEventListener("touchmove", preventScroll);
             div.addEventListener("touchend", hideScrollAlert);
         }
-
-        adjustFamilyTestimonials();
-
-        function adjustFamilyTestimonials() {
-            image1 = document.getElementById("image1");
-            image2 = document.getElementById("image2");
-            image1.src = "https://7oakswelcomesrefugees.github.io/RefugeeSpeechBubbles_splitA.png"
-            image2.src = "https://7oakswelcomesrefugees.github.io/RefugeeSpeechBubbles_splitB.png"
-
-            image1.parentElement.style.width = "100%";
-            image1.parentElement.style.padding = 0;
-            image2.parentElement.style.width = "100%";
-            image2.parentElement.style.padding = 0;
-            image2.parentElement.style.display = "block";
-        }
-    }
-    }
+    }  
 
     if (document.getElementsByClassName("donate")[0]) {
         if (screen_width < 480) {
