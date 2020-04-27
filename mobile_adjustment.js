@@ -41,6 +41,13 @@ if (screen_width < 1050) {
 
         if (document.getElementById("family_testimonials")) {
         active_embed = "family_testimonials";
+
+        if (iOS) { 
+            div = document.getElementsByTagName("div")[0];
+            div.addEventListener("touchmove", preventScroll);
+            div.addEventListener("touchend", hideScrollAlert);
+        }
+
         adjustFamilyTestimonials();
 
         function adjustFamilyTestimonials() {
