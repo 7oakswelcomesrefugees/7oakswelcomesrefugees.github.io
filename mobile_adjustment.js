@@ -277,6 +277,8 @@ if (screen_width < 1050) {
         }
     }
 
+} else {
+    document.documentElement.style.setProperty("--map-window-height", "480px");
 }
 
 function preventScroll(e) {
