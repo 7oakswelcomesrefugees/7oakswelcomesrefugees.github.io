@@ -184,6 +184,14 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		padding-left: 10px
 	}
 
+	.single_map {
+		height: var(--map-window-height);
+	}
+
+	#map_iframe {
+		height: var(--map-window-height);
+	}
+
 
 /* Clearfix (clear floats) */
 	.row::after {
