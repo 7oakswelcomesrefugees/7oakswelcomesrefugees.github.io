@@ -224,7 +224,7 @@ if (screen_width < 1050) {
             overlays[0].remove();
         }
 
-        if (iOS) {
+        if (screen_size < 480) {
             map_iframe.remove();
             document.getElementById("iOS_maps").style.display="block";
         } 
