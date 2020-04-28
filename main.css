@@ -125,6 +125,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		height: 35%; 
 		width: 100%; 
 		z-index: 4;
+		pointer-events: none;
 	}
 
 	/* Donate */
