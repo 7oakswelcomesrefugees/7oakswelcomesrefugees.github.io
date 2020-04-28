@@ -181,7 +181,7 @@ if (screen_width < 1050) {
 
             if ((620 < screen_width ) && (screen_width < 1000)) {
                 var campaigns = document.getElementsByClassName("campaign");
-                tablet_fontsize = Math.round(parent.innerWidth/44);
+                tablet_fontsize = Math.round(parent.innerWidth/14);
 
                 for (var i = 0; i < campaigns.length; i++) {
                     campaigns[i].style.fontSize = tablet_fontsize.toString() + "px";
