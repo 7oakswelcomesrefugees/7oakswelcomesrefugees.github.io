@@ -142,6 +142,7 @@ if (screen_width < 1050) {
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         parent_frame.scrolling="no";
+        parent_frame.style.overflow="visible";
 
         if (iOS) { 
             div = document.getElementsByClassName("display_archive")[0];
