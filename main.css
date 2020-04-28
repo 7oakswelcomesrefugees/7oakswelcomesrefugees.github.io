@@ -1,4 +1,4 @@
-
+	
 /* MAIN CSS FILE
  
 NOTE: use of google drive to host CSS file introduced lag, the CSS will still be stored within Google Drive but within a GitHub repository 
@@ -82,6 +82,19 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		padding: 0 0 0 0;
 		margin: 0;
 		text-align: center;
+	}
+
+	/* Blogs & News */
+
+	.display_archive {
+		font-family:'Open Sans';
+		color: #212121;
+		font-size: 18px; 
+	}
+	}
+	.campaign {
+		line-height: 125%; 
+		margin: 5px;
 	}
 
 	/* Donate */
