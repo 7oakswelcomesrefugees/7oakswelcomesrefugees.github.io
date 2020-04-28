@@ -87,17 +87,21 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	/* Blogs & News */
 
 	.display_archive {
-		font-family:'Open Sans';
-		color: #212121;
-		font-size: 18px; 
+
 	}
-	}
+	
 	.campaign {
 		font-family:'Oswald';
 		color: #1f1f1f;
 		font-size: 18px; 
 		line-height: 125%; 
 		margin: 5px;
+	}
+
+	.newsletter_title {
+		font-family:'Open Sans';
+		color: #212121;
+		font-size: 18px; 
 	}
 
 	/* Donate */
