@@ -107,6 +107,12 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
     	left: 10px;	
 	}
 
+	#title_div {
+    text-align: center;
+    font-family: Oswald;
+    font-size: 50px;
+}
+
 	/* Donate */
 	div.donate {
 		padding: 0px 0px 0px 14px;
