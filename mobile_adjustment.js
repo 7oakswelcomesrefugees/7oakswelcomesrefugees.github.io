@@ -165,7 +165,7 @@ if (screen_width < 1050) {
                 }
             }
 
-            if ((760 < screen_width ) && (screen_width < 1000)) {
+            if (((760 < screen_width ) && (screen_width < 1000)) || iOS) {
                 var campaigns = document.getElementsByClassName("campaign");
                 for (var i = 0; i < campaigns.length; i++) {
                     title_str = campaigns[i].children[0].innerText
