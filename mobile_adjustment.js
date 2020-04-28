@@ -165,6 +165,15 @@ if (screen_width < 1050) {
                 }
             }
 
+            if ((760 < screen_width ) && (screen_width < 1000)) {
+                var campaigns = document.getElementsByClassName("campaign");
+                for (var i = 0; i < campaigns.length; i++) {
+                    title_str = campaigns[i].children[0].innerText
+                    new_title_str = title_str.replace("Newsletter","News")
+                    campaigns[i].children[0].innerText = new_title_str;
+                }
+            }
+
             if (screen_width < 480) {
                 new_fontsize="36px";
             } else if (screen_width < 767) {
