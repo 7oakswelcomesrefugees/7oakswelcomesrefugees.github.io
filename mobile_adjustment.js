@@ -166,6 +166,15 @@ if (screen_width < 1050) {
                 }
             }
 
+            if (screen_width < 480) {
+                new_fontsize="36px";
+            } else if (screen_width < 767) {
+                new_fontsize="44px";
+            } else {
+                new_fontsize="50px";
+                title_div.style.textAlign = "left";
+            }
+
             if (((760 < screen_width ) && (screen_width < 1000)) || iOS) {
                 var campaigns = document.getElementsByClassName("campaign");
                 for (var i = 0; i < campaigns.length; i++) {
@@ -174,17 +183,8 @@ if (screen_width < 1050) {
                     campaigns[i].children[0].innerText = new_title_str;
                     campaigns[i].style.paddingLeft = 0;
                     campaigns[i].style.fontSize = "14px";
-                    title_div.style.fontSize = "36px";
+                    new_fontSize = "44px";
                 }
-            }
-
-            if (screen_width < 480) {
-                new_fontsize="36px";
-            } else if (screen_width < 767) {
-                new_fontsize="44px";
-            } else {
-                new_fontsize="50px";
-                title_div.style.textAlign = "left";
             }
 
             title_div.style.fontSize = new_fontsize;
