@@ -177,8 +177,8 @@ if (screen_width < 1050) {
                 title_div.style.textAlign = "left";
             }
 
+            var campaigns = document.getElementsByClassName("campaign");
             if ((620 < screen_width ) && (screen_width < 1000)) {
-                var campaigns = document.getElementsByClassName("campaign");
                 tablet_fontsize = Math.round(parent.innerWidth/14);
 
                 for (var i = 0; i < campaigns.length; i++) {
@@ -195,8 +195,10 @@ if (screen_width < 1050) {
                 }
                 new_fontsize = "40px";
             } else {
-                campaigns[i].style.fontSize = "18px";
-                campaigns[i].children[0].style.fontSize = "18px";
+                for (var i = 0; i < campaigns.length; i++) {
+                    campaigns[i].style.fontSize = "18px";
+                    campaigns[i].children[0].style.fontSize = "18px";
+                }
             }
 
             title_div.style.fontSize = new_fontsize;
