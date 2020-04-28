@@ -107,7 +107,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		vertical-align: top;
 		position: relative;
     	left: 10px;
-    	z-index: 2;
+    	z-index: -1;
 	}
 
 	#title_div {
