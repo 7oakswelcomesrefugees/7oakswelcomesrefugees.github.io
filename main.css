@@ -127,7 +127,9 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	}
 
 	table.donate {
-		padding-left: 3px
+		padding-left: 3px;
+		position: absolute;
+		z-index: -1;
 	}
 
 	table.donate td {
