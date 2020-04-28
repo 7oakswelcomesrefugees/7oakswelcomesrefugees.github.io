@@ -181,12 +181,15 @@ if (screen_width < 1050) {
 
             if ((620 < screen_width ) && (screen_width < 1000)) {
                 var campaigns = document.getElementsByClassName("campaign");
+                tablet_fontsize = Math.round(parent.innerWidth/40);
+
                 for (var i = 0; i < campaigns.length; i++) {
+                    campaigns[i].style.fontSize = tablet_fontsize.toString() + "px";
+
                     title_str = campaigns[i].children[0].innerText
                     new_title_str = title_str.replace("Newsletter","News")
                     campaigns[i].children[0].innerText = new_title_str;
                     campaigns[i].style.paddingLeft = 0;
-                    campaigns[i].style.fontSize = "16px";
                     // campaigns[i].children[0].style.fontSize = "16px";
                     campaigns[i].style.lineHeight = "160%";
                     campaigns[i].style.marginLeft = 0;
