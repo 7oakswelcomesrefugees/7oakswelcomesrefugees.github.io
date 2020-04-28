@@ -171,6 +171,7 @@ if (screen_width < 1050) {
                 new_fontsize="44px";
             } else {
                 new_fontsize="50px";
+                title_div.style.textAlign = "left";
             }
 
             title_div.style.fontSize = new_fontsize;
