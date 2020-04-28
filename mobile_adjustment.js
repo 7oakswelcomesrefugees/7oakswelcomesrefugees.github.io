@@ -168,6 +168,10 @@ if (screen_width < 1050) {
 
             if (screen_width < 480) {
                 new_fontsize="36px";
+                var campaigns = document.getElementsByClassName("campaign");
+                for (var i = 0; i < campaigns.length; i++) {
+                    campaigns[i].style.paddingLeft = 6%;
+                }
             } else if (screen_width < 767) {
                 new_fontsize="44px";
             } else {
