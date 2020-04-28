@@ -137,6 +137,35 @@ if (screen_width < 1050) {
         }
     }
 
+    if (document.getElementsByClassName("newsletter_title")[0]) {
+        active_embed = "blogs_news"
+
+        parent_frame = parent.document.getElementsByTagName('iframe')[0];
+        parent_frame.scrolling="no";
+
+        if (iOS) { 
+            div = document.getElementsByTagName("div")[0];
+            div.style.height="100%"; 
+            div.addEventListener("touchmove", preventScroll);
+            div.addEventListener("touchend", hideScrollAlert);
+        }
+
+        adjustNewsletterTitle()
+
+        function adjustNewsletterTitle() {
+            title_div = document.getElementById("title_div");
+            if (screen_width < 480) {
+                new_fontsize="36px";
+            } else if (screen_width < 767) {
+                new_fontsize="44px";
+            } else {
+                new_fontsize="50px";
+            }
+
+            title_div.style.fontSize = new_fontsize;
+        }
+    }
+
 
     if (document.getElementsByClassName("aboutus")[0]) {
         active_embed = "trustee_id";
@@ -316,6 +345,7 @@ if (active_embed == "address_blurb") { updateFunction = adjustAddressBlurb; }
 if (active_embed == "family_testimonials") { updateFunction = adjustFamilyTestimonials; }
 if (active_embed == "google_map") { updateFunction = adjustGoogleMap; }
 if (active_embed == "footer") { updateFunction = adjustFooter; }
+if (active_embed == "blogs_news") { updateFunction = adjustNewsletterTitle; }
 
 var adjust_delay = 150;
 if (active_embed == "google_map") {
