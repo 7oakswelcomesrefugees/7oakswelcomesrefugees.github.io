@@ -118,6 +118,15 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	    z-index: 3;
 	}
 
+	#edge_fade_div {
+		background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255)); 
+		position: fixed; 
+		bottom: 0px; 
+		height: 30px; 
+		width: 100%; 
+		z-index: 4;
+	}
+
 	/* Donate */
 	div.donate {
 		padding: 0px 0px 0px 14px;
