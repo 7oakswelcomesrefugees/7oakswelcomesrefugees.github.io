@@ -183,7 +183,7 @@ if (screen_width < 1050) {
                     campaigns[i].children[0].innerText = new_title_str;
                     campaigns[i].style.paddingLeft = 0;
                     campaigns[i].style.fontSize = "14px";
-                    new_fontSize = "44px";
+                    new_fontSize = "40px";
                 }
             }
 
