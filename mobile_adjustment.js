@@ -188,7 +188,7 @@ if (screen_width < 1050) {
                     campaigns[i].style.paddingLeft = 0;
                     campaigns[i].style.fontSize = "14px";
                     campaigns[i].style.lineHeight = "160%";
-                    campaigns[i].children[0].style.verticalAlign = "top";
+                    campaigns[i].childNodes[0].style.verticalAlign = "bottom";
                 }
                 new_fontsize = "40px";
             }
