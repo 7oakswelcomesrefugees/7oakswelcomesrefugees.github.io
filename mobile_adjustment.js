@@ -194,6 +194,9 @@ if (screen_width < 1050) {
                     campaigns[i].style.marginLeft = 0;
                 }
                 new_fontsize = "40px";
+            } else {
+                campaigns[i].style.fontSize = "18px";
+                campaigns[i].children[0].style.fontSize = "18px";
             }
 
             title_div.style.fontSize = new_fontsize;
