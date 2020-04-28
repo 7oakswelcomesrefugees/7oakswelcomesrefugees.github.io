@@ -298,9 +298,9 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	}
 
 	#GDPR_policy {
-		text-align: right;
 		font-family: Oswald;
 		font-size: 15px;
 		line-height: 1.3;
+		text-decoration: none;
 	}
 	
