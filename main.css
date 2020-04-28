@@ -97,7 +97,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		line-height: 125%; 
 		margin: 5px;
 		padding-left: 0%;
-		z-index: 1
+		z-index: -1
 	}
 
 	.newsletter_title {
