@@ -102,6 +102,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		font-family:'Open Sans';
 		color: #212121;
 		font-size: 18px; 
+		vertical-align: top;
 	}
 
 	/* Donate */
