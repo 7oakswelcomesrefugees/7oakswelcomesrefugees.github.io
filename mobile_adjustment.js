@@ -80,12 +80,10 @@ if (screen_width < 1050) {
             parent_frame = parent.document.getElementsByTagName('iframe')[0];
             parent_frame.scrolling="no";
             if (iOS) { 
-                console.log("iOS")
-
-                // table_div = document.getElementById("table_div");
-                // table_div.style.height="100%"; 
-                // table_div.addEventListener("touchmove", preventScroll); 
-                // table_div.addEventListener("touchend", hideScrollAlert); 
+                table_div = document.getElementById("table_div");
+                table_div.style.height="100%"; 
+                table_div.addEventListener("touchmove", preventScroll); 
+                table_div.addEventListener("touchend", hideScrollAlert); 
             } 
 
             adjustBankTable();
@@ -116,12 +114,10 @@ if (screen_width < 1050) {
             parent_frame = parent.document.getElementsByTagName('iframe')[0];
             parent_frame.scrolling="no";
             if (iOS) { 
-                console.log("iOS")
-
-                // address_div = document.getElementById("address_div");
-                // address_div.style.height="100%"; 
-                // address_div.addEventListener("touchmove", preventScroll);
-                // address_div.addEventListener("touchend", hideScrollAlert);
+                address_div = document.getElementById("address_div");
+                address_div.style.height="100%"; 
+                address_div.addEventListener("touchmove", preventScroll);
+                address_div.addEventListener("touchend", hideScrollAlert);
             }
 
             adjustChequeAddress();
