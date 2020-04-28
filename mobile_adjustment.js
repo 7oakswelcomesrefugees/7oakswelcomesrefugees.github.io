@@ -154,6 +154,16 @@ if (screen_width < 1050) {
 
         function adjustNewsletterTitle() {
             title_div = document.getElementById("title_div");
+
+            screen_width = screen.width;
+            if (iOS) {
+                if ((window.orientation == 0) || (window.orientation == 180)) {
+                    screen_width = screen.width;
+                } else if ((window.orientation == 90) || (window.orientation == -90)) {
+                    screen_width = screen.height;
+                }
+            }
+
             if (screen_width < 480) {
                 new_fontsize="36px";
             } else if (screen_width < 767) {
