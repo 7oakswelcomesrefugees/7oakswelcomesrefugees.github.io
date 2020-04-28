@@ -185,6 +185,7 @@ if (screen_width < 1050) {
 
                 for (var i = 0; i < campaigns.length; i++) {
                     campaigns[i].style.fontSize = tablet_fontsize.toString() + "px";
+                    campaigns[i].children[0].style.fontSize = tablet_fontsize.toString() + "px";
 
                     title_str = campaigns[i].children[0].innerText
                     new_title_str = title_str.replace("Newsletter","News")
