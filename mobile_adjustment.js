@@ -271,7 +271,7 @@ if (screen_width < 1050) {
             dynamic_padding = Math.round(parent_width/divisors_address_blurb[1]);
             address_blurb.style.paddingLeft = dynamic_padding.toString() + "px";
         }
-
+        console.log("hello")
         
     }
 
