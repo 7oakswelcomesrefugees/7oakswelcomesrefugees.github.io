@@ -145,6 +145,7 @@ if (screen_width < 1050) {
 
         if (iOS) { 
             div = document.getElementsByClassName("display_archive")[0];
+            div.style.height="100%"; 
             div.addEventListener("touchmove", preventScroll);
             div.addEventListener("touchend", hideScrollAlert);
         }
