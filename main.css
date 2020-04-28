@@ -103,6 +103,8 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		color: #212121;
 		font-size: 18px; 
 		vertical-align: top;
+		position: relative;
+    	left: 10px;	
 	}
 
 	/* Donate */
