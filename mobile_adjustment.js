@@ -18,7 +18,9 @@ if (!iOS && document.getElementById("scroll_alert")) {
     }
 }
 
-
+if(document.getElementById("title_div")) {
+    document.getElementById("title_background_div").height = document.getElementById("title_div").scrollHeight;
+}
 
 
 
