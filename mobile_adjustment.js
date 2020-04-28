@@ -154,6 +154,7 @@ if (screen_width < 1050) {
 
         function adjustNewsletterTitle() {
             title_div = document.getElementById("title_div");
+            title_div.style.textAlign = "center";
 
             screen_width = screen.width;
             if (iOS) {
