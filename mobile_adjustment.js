@@ -152,10 +152,6 @@ if (screen_width < 1050) {
             title_div = document.getElementById("title_div");
             title_div.style.textAlign = "center";
 
-            
-            
-
-
             screen_width = screen.width;
             if (iOS) {
                 if ((window.orientation == 0) || (window.orientation == 180)) {
