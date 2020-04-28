@@ -111,12 +111,12 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	}
 
 	#title_div {
-    text-align: left;
-    font-family: Oswald;
-    font-size: 50px;
-    color: #1f1f1f;
-    z-index: 3;
-}
+	    text-align: left;
+	    font-family: Oswald;
+	    font-size: 50px;
+	    color: #1f1f1f;
+	    z-index: 3;
+	}
 
 	/* Donate */
 	div.donate {
