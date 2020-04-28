@@ -171,6 +171,7 @@ if (screen_width < 1050) {
                     title_str = campaigns[i].children[0].innerText
                     new_title_str = title_str.replace("Newsletter","News")
                     campaigns[i].children[0].innerText = new_title_str;
+                    campaign.style.paddingLeft = 0;
                 }
             }
 
