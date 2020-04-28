@@ -87,7 +87,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 	/* Blogs & News */
 
 	.display_archive {
-		padding-left: 6%;
+
 	}
 	
 	.campaign {
@@ -96,6 +96,7 @@ NOTE: use of google drive to host CSS file introduced lag, the CSS will still be
 		font-size: 18px; 
 		line-height: 125%; 
 		margin: 5px;
+		padding-left: 6%;
 	}
 
 	.newsletter_title {
