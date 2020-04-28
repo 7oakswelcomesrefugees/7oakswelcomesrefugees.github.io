@@ -144,12 +144,12 @@ if (screen_width < 1050) {
         parent_frame.scrolling="no";
         parent_frame.style.overflow="visible";
 
-        if (iOS) { 
-            div = document.getElementsByClassName("display_archive")[0];
-            div.style.height="100%"; 
-            div.addEventListener("touchmove", preventScroll);
-            div.addEventListener("touchend", hideScrollAlert);
-        }
+        // if (iOS) { 
+        //     div = document.getElementsByClassName("display_archive")[0];
+        //     div.style.height="100%"; 
+        //     div.addEventListener("touchmove", preventScroll);
+        //     div.addEventListener("touchend", hideScrollAlert);
+        // }
 
         adjustNewsletterTitle()
 
