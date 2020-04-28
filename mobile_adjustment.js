@@ -173,7 +173,7 @@ if (screen_width < 1050) {
                     new_title_str = title_str.replace("Newsletter","News")
                     campaigns[i].children[0].innerText = new_title_str;
                     campaigns[i].style.paddingLeft = 0;
-                    campaigns[i].style.fontSize = "15px";
+                    campaigns[i].style.fontSize = "14px";
                     title_div.style.fontSize = "44px";
                 }
             }
