@@ -76,12 +76,12 @@ if (screen_width < 1050) {
 
             parent_frame = parent.document.getElementsByTagName('iframe')[0];
             parent_frame.scrolling="no";
-            // if (iOS) { 
-            //     table_div = document.getElementById("table_div");
-            //     table_div.style.height="100%"; 
-            //     table_div.addEventListener("touchmove", preventScroll); 
-            //     table_div.addEventListener("touchend", hideScrollAlert); 
-            // } 
+            if (iOS) { 
+                table_div = document.getElementById("table_div");
+                table_div.style.height="100%"; 
+                table_div.addEventListener("touchmove", preventScroll); 
+                table_div.addEventListener("touchend", hideScrollAlert); 
+            } 
 
             adjustBankTable();
         }
@@ -139,18 +139,10 @@ if (screen_width < 1050) {
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
 
-        // if (iOS) { 
-        //     div = document.getElementsByClassName("display_archive")[0];
-        //     div.style.height="100%"; 
-        //     div.addEventListener("touchmove", preventScroll);
-        //     div.addEventListener("touchend", hideScrollAlert);
-        // }
-
         adjustNewsletterTitle()
 
         function adjustNewsletterTitle() {
             title_div = document.getElementById("title_div");
-            title_div.style.textAlign = "center";
 
             screen_width = screen.width;
             if (iOS) {
@@ -161,21 +153,17 @@ if (screen_width < 1050) {
                 }
             }
 
-            if (screen_width < 480) {
-                new_fontsize="36px";
-                var campaigns = document.getElementsByClassName("campaign");
-                for (var i = 0; i < campaigns.length; i++) {
-                    campaigns[i].style.paddingLeft = "6%";
-                }
-            } else if (screen_width < 767) {
-                new_fontsize="44px";
-            } else {
-                new_fontsize="50px";
-                title_div.style.textAlign = "left";
-            }
-
             var campaigns = document.getElementsByClassName("campaign");
-            if ((620 < screen_width ) && (screen_width < 1000)) {
+            if (screen_width < 620) {
+                new_title_fontsize="36px";
+                title_div.style.textAlign = "center";
+                
+                for (var i = 0; i < campaigns.length; i++) {
+                    campaigns[i].style.paddingLeft = "10%";
+                }
+            } else if ((620 < screen_width ) && (screen_width < 1000)) {
+                new_title_fontsize = "40px";
+                title_div.style.textAlign = "left";
                 tablet_fontsize = Math.round(parent.innerWidth/14);
 
                 for (var i = 0; i < campaigns.length; i++) {
@@ -185,20 +173,22 @@ if (screen_width < 1050) {
                     title_str = campaigns[i].children[0].innerText
                     new_title_str = title_str.replace("Newsletter","News")
                     campaigns[i].children[0].innerText = new_title_str;
+                    
                     campaigns[i].style.paddingLeft = 0;
-                    // campaigns[i].children[0].style.fontSize = "16px";
                     campaigns[i].style.lineHeight = "160%";
                     campaigns[i].style.marginLeft = 0;
-                }
-                new_fontsize = "40px";
+                } 
             } else {
+                new_title_fontsize="50px";
+                title_div.style.textAlign = "left";
+                
                 for (var i = 0; i < campaigns.length; i++) {
                     campaigns[i].style.fontSize = "18px";
                     campaigns[i].children[0].style.fontSize = "18px";
                 }
             }
 
-            title_div.style.fontSize = new_fontsize;
+            title_div.style.fontSize = new_title_fontsize;
             document.getElementById("title_background_div").style.height = document.getElementById("title_div").scrollHeight;
         }
     }
