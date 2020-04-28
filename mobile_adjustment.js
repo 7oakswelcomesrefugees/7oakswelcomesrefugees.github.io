@@ -152,7 +152,7 @@ if (screen_width < 1050) {
             title_div = document.getElementById("title_div");
             title_div.style.textAlign = "center";
 
-            document.getElementById("title_background_div").style.height = document.getElementById("title_div").scrollHeight;
+            
             
 
 
@@ -203,6 +203,7 @@ if (screen_width < 1050) {
             }
 
             title_div.style.fontSize = new_fontsize;
+            document.getElementById("title_background_div").style.height = document.getElementById("title_div").scrollHeight;
         }
     }
 
