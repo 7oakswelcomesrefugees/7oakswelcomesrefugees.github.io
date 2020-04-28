@@ -175,7 +175,7 @@ if (screen_width < 1050) {
                 title_div.style.textAlign = "left";
             }
 
-            if (((760 < screen_width ) && (screen_width < 1000)) || iOS) {
+            if ((760 < screen_width ) && (screen_width < 1000)) {
                 var campaigns = document.getElementsByClassName("campaign");
                 for (var i = 0; i < campaigns.length; i++) {
                     title_str = campaigns[i].children[0].innerText
@@ -184,7 +184,7 @@ if (screen_width < 1050) {
                     campaigns[i].style.paddingLeft = 0;
                     campaigns[i].style.fontSize = "14px";
                 }
-                new_fontsize = "30px";
+                new_fontsize = "40px";
             }
 
             title_div.style.fontSize = new_fontsize;
