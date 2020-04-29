@@ -138,10 +138,10 @@ if (screen_width < 1050) {
         active_embed = "blogs_news"
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
-        if (iOS) {
-            document.getElementById("edge_fade_div").remove();
-            window.removeEventListener("scroll",dragFrame);
-        }
+        // if (iOS) {
+        //     document.getElementById("edge_fade_div").remove();
+        //     window.removeEventListener("scroll",dragFrame);
+        // }
 
         adjustNewsletterTitle()
 
