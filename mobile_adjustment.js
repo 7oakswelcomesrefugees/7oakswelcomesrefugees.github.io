@@ -138,6 +138,10 @@ if (screen_width < 1050) {
         active_embed = "blogs_news"
 
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
+        if (iOS) {
+            document.getElementById("edge_fade_div").remove();
+            document.getElementsByClassName("display_archive")[0].removeEventListener("scroll",dragFrame);
+        }
 
         adjustNewsletterTitle()
 
@@ -164,18 +168,14 @@ if (screen_width < 1050) {
             } else if ((620 < screen_width ) && (screen_width < 1000)) {
                 new_title_fontsize = "40px";
                 title_div.style.textAlign = "left";
-                // tablet_fontsize = Math.round(parent.innerWidth/14);
 
                 for (var i = 0; i < campaigns.length; i++) {
-                    // campaigns[i].style.fontSize = tablet_fontsize.toString() + "px";
-                    // campaigns[i].children[0].style.fontSize = tablet_fontsize.toString() + "px";
-
+                    
                     title_str = campaigns[i].children[0].innerText
                     new_title_str = title_str.replace("Newsletter","News")
                     campaigns[i].children[0].innerText = new_title_str;
                     
                     campaigns[i].style.paddingLeft = 0;
-                    // campaigns[i].style.lineHeight = "160%";
                     campaigns[i].style.marginLeft = 0;
                 } 
             } else {
