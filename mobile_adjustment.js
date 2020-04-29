@@ -140,7 +140,7 @@ if (screen_width < 1050) {
         parent_frame = parent.document.getElementsByTagName('iframe')[0];
         if (iOS) {
             document.getElementById("edge_fade_div").remove();
-            document.getElementsByClassName("display_archive")[0].removeEventListener("scroll",dragFrame);
+            window.removeEventListener("scroll",dragFrame);
         }
 
         adjustNewsletterTitle()
