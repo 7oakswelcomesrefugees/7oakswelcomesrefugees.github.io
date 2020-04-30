@@ -1,0 +1,46 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+	div {
+	animation-name: cookie_load;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+}
+
+</style>
+<script>
+// document.getElementsByTagName("div")[0].style.cursor = cursor: `url(${url_head + cookie_imgs[0]}), auto;`
+data = $.getJSON('https://7oakswelcomesrefugees.github.io/CookieCursor/data.txt', function(data) {
+	cookie_imgs=data['filenames'];
+	frame_n = cookie_imgs.length;
+	url_head = "https://7oakswelcomesrefugees.github.io/CookieCursor/";
+
+	var style = document.createElement('style');
+	style.type = 'text/css';
+	var keyFrames = "@keyframes cookie_load { \ "
+
+	for (var i = 0; i < frame_n; i++) {
+		time_prop = Math.floor(100/frame_n) * i;
+		frame_str = `${time_prop}%{\
+	  	cursor: url(${url_head + cookie_imgs[i]}), auto;\
+	  	} \ `
+		keyFrames = keyFrames.concat(frame_str);
+	}
+	keyFrames = keyFrames.concat(`100%{\
+		  	cursor: url(${url_head + cookie_imgs[0]}), auto;\
+		  	} \ 
+	    };`);
+	  
+	style.innerHTML = keyFrames;
+	document.getElementsByTagName('head')[0].appendChild(style);
+	});
+
+</script>
+</head>
+<body style="width:100%;height:100%">
+<div style="width:100%;height:100%">
+</div>
+
+</body>
+</html>
