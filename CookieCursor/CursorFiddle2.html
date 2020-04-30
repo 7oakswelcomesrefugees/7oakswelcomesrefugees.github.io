@@ -1,0 +1,48 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+	* {
+		cursor: url('https://7oakswelcomesrefugees.github.io/CookieCursor/CookieWhole.png'),auto;
+	-webkit-animation: cookie_load 1s infinite;
+	animation: cookie_load 1s infinite;
+}
+
+</style>
+
+</head>
+<body style="width:100%;height:100%">
+<div style="width:100%;height:100%">
+</div>
+<script>
+	document.cookieImages=[];
+	var cursorArray=[];
+// document.getElementsByTagName("div")[0].style.cursor = cursor: `url(${url_head + cookie_imgs[0]}), auto;`
+$.ajax({
+	url:'https://7oakswelcomesrefugees.github.io/CookieCursor/data.txt',
+	dataType: 'json',
+	async: false,
+	success: function(data) {
+		cookie_imgs=data['filenames'];
+		frame_n = cookie_imgs.length;
+		url_head = "https://7oakswelcomesrefugees.github.io/CookieCursor/";
+
+		for (var i = 0; i < frame_n; i++) {
+			cursorArray.push(`url(${url_head + cookie_imgs[i]}), auto`)
+		}
+}
+});
+console.log(cursorArray);
+i=0;
+(function cursor(){
+  document.getElementsByTagName("div")[0].style.cursor  = cursorArray[i];
+  i++;
+  if(i == cursorArray.length){
+    i = 0; 
+  }
+   setTimeout(cursor, 75);
+})();
+
+</script>
+</body>
+</html>
