@@ -20,5 +20,5 @@ data = {}
 data['filenames']=filenames;
 print(data)
 
-with open('data.txt', 'w') as outfile:
+with open('data.json', 'w') as outfile:
     json.dump(data, outfile)
