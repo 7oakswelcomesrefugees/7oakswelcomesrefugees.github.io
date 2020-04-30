@@ -1,1 +1,1 @@
-{"filenames": ["Cookie1.png", "Cookie2.png", "Cookie3.png", "Cookie4.png", "Cookie5.png", "Cookie6.png", "Cookie7.png", "Cookie8.png", "Cookie9.png", "CookieZeaten.png", "Cookie_whole.png"]}
+{"filenames": ["CookieWhole.png", "Cookie_1.png", "Cookie_2.png", "Cookie_3.png", "Cookie_4.png", "Cookie_5.png", "Cookie_6.png", "Cookie_7.png", "Cookie_8.png", "Cookie_9.png", "Cookie_Eaten.png"]}
