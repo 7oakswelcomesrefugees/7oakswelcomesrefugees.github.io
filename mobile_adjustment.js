@@ -98,6 +98,14 @@ if (screen_width < 1050) {
             for (var i=0; i< cells.length; i++) {
                 cells[i].style.fontSize = new_fontsize.toString() + "px";
               
+                if (cells[i].innerText == "Acc Name:") {
+                    cells[i].innerText = "Name:";
+                } else if (cells[i].innerText == "Sort Code:") {
+                    cells[i].innerText = "Sort:";
+                } else if (cells[i].innerText == "Acc No:") {
+                    cells[i].innerText = "Acc:";
+                }
+
                 // if (cells[i].innerText == "Sevenoaks Welcomes Refugees") {
                 //     cells[i].innerText = "Sevenoaks W. R.";
                 // }
