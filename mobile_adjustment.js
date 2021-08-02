@@ -98,9 +98,9 @@ if (screen_width < 1050) {
             for (var i=0; i< cells.length; i++) {
                 cells[i].style.fontSize = new_fontsize.toString() + "px";
               
-                if (cells[i].innerText == "Sevenoaks Welcomes Refugees") {
-                    cells[i].innerText = "Sevenoaks W. R.";
-                }
+                // if (cells[i].innerText == "Sevenoaks Welcomes Refugees") {
+                //     cells[i].innerText = "Sevenoaks W. R.";
+                // }
             }    
         }
 
